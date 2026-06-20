@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://c1u4bfctawmvl"]
 
 [ext_resource type="TileSet" uid="uid://b4m4i1kg3f0n6" path="res://assets/basic.tres" id="1_f3sb7"]
+[ext_resource type="PackedScene" uid="uid://br34pbtviltc" path="res://assets/enemy.tscn" id="2_fj7yv"]
 
 [node name="Node2D" type="Node2D" unique_id=183599338]
 
@@ -15,3 +16,6 @@ tile_set = ExtResource("1_f3sb7")
 [node name="Deco-1" type="TileMapLayer" parent="." unique_id=989506255]
 tile_map_data = PackedByteArray("AAAfABEAAQAHAAQAAAA=")
 tile_set = ExtResource("1_f3sb7")
+
+[node name="Enemy" parent="." unique_id=1010249110 instance=ExtResource("2_fj7yv")]
+position = Vector2(265, 218)
