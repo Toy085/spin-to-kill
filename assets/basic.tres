@@ -3,6 +3,18 @@
 [ext_resource type="Texture2D" uid="uid://b2x8r3oqca8nn" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Tiles/Tilemap/tilemap_packed.png" id="1_3egcm"]
 [ext_resource type="Texture2D" uid="uid://wquu42fwg5kr" path="res://assets/kenney_tiny-dungeon/Tilemap/tilemap_packed.png" id="2_7kjqa"]
 
+[sub_resource type="TileMapPattern" id="TileMapPattern_7kjqa"]
+tile_data = PackedInt32Array(0, 524288, 3, 65536, 524288, 4)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_fa45g"]
+tile_data = PackedInt32Array(0, 196608, 3, 65536, 196608, 4)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_6elgr"]
+tile_data = PackedInt32Array(0, 786432, 3, 65536, 786432, 4, 1, 851968, 3, 65537, 851968, 4)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_f6qs8"]
+tile_data = PackedInt32Array(0, 917504, 3, 65536, 917504, 4)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fj7yv"]
 texture = ExtResource("1_3egcm")
 0:0/0 = 0
@@ -830,3 +842,7 @@ terrain_set_0/terrain_3/name = "Terrain 2"
 terrain_set_0/terrain_3/color = Color(0.14, 0.11834667, 0.099400006, 1)
 sources/0 = SubResource("TileSetAtlasSource_fj7yv")
 sources/1 = SubResource("TileSetAtlasSource_fa45g")
+pattern_0 = SubResource("TileMapPattern_7kjqa")
+pattern_1 = SubResource("TileMapPattern_fa45g")
+pattern_2 = SubResource("TileMapPattern_6elgr")
+pattern_3 = SubResource("TileMapPattern_f6qs8")
