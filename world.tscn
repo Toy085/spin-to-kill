@@ -19,3 +19,5 @@ tile_set = ExtResource("1_f3sb7")
 
 [node name="Enemy" parent="." unique_id=1010249110 instance=ExtResource("2_fj7yv")]
 position = Vector2(265, 218)
+
+[node name="Enemy spawner" type="Node2D" parent="." unique_id=1220211632]
