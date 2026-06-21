@@ -32,5 +32,6 @@ autostart = true
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1830320758]
 
 [node name="PauseMenu" parent="CanvasLayer" unique_id=1166785966 instance=ExtResource("4_aqk2v")]
+visible = false
 
 [connection signal="timeout" from="Enemy spawner/SpawnTimer" to="Enemy spawner" method="_on_spawn_timer_timeout"]
