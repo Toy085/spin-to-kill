@@ -3,6 +3,7 @@
 [ext_resource type="TileSet" uid="uid://b4m4i1kg3f0n6" path="res://assets/basic.tres" id="1_f3sb7"]
 [ext_resource type="PackedScene" uid="uid://br34pbtviltc" path="res://assets/enemy.tscn" id="2_fj7yv"]
 [ext_resource type="Script" uid="uid://bacygmvkp0iqp" path="res://scripts/enemy_spawner.gd" id="3_tlwt5"]
+[ext_resource type="PackedScene" uid="uid://duvphv4qv6q86" path="res://pause_menu.tscn" id="4_aqk2v"]
 
 [node name="Node2D" type="Node2D" unique_id=183599338]
 
@@ -27,5 +28,9 @@ enemy_scene = ExtResource("2_fj7yv")
 
 [node name="SpawnTimer" type="Timer" parent="Enemy spawner" unique_id=230430120]
 autostart = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1830320758]
+
+[node name="PauseMenu" parent="CanvasLayer" unique_id=1166785966 instance=ExtResource("4_aqk2v")]
 
 [connection signal="timeout" from="Enemy spawner/SpawnTimer" to="Enemy spawner" method="_on_spawn_timer_timeout"]
