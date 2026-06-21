@@ -1,10 +1,13 @@
 [gd_resource type="Theme" format=3 uid="uid://dmum6lfqbfasj"]
 
 [ext_resource type="StyleBox" uid="uid://dqslbei3btoer" path="res://assets/style_box_texture/basic_red_button.tres" id="1_fckqt"]
+[ext_resource type="FontFile" uid="uid://c26t3s88bmep2" path="res://assets/fonts/Ubuntu-B.ttf" id="1_mx4k3"]
 [ext_resource type="StyleBox" uid="uid://igibjaj4f8se" path="res://assets/style_box_texture/gray_button.tres" id="2_mx4k3"]
 [ext_resource type="StyleBox" uid="uid://cshwlrpfl6awj" path="res://assets/style_box_texture/basic_red_button_pressed.tres" id="2_wnmk3"]
 
 [resource]
+Button/font_sizes/font_size = 18
+Button/fonts/font = ExtResource("1_mx4k3")
 Button/styles/focus = ExtResource("1_fckqt")
 Button/styles/hover = ExtResource("1_fckqt")
 Button/styles/normal = ExtResource("2_mx4k3")
