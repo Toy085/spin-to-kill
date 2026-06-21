@@ -2,6 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://b4m4i1kg3f0n6" path="res://assets/basic.tres" id="1_f3sb7"]
 [ext_resource type="PackedScene" uid="uid://br34pbtviltc" path="res://assets/enemy.tscn" id="2_fj7yv"]
+[ext_resource type="Script" uid="uid://bacygmvkp0iqp" path="res://scripts/enemy_spawner.gd" id="3_tlwt5"]
 
 [node name="Node2D" type="Node2D" unique_id=183599338]
 
@@ -21,3 +22,10 @@ tile_set = ExtResource("1_f3sb7")
 position = Vector2(265, 218)
 
 [node name="Enemy spawner" type="Node2D" parent="." unique_id=1220211632]
+script = ExtResource("3_tlwt5")
+enemy_scene = ExtResource("2_fj7yv")
+
+[node name="SpawnTimer" type="Timer" parent="Enemy spawner" unique_id=230430120]
+autostart = true
+
+[connection signal="timeout" from="Enemy spawner/SpawnTimer" to="Enemy spawner" method="_on_spawn_timer_timeout"]
