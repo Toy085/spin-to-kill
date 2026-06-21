@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://wpvrjvkvmkkm"]
 
 [ext_resource type="Script" uid="uid://cc3hrq6ovf61t" path="res://scripts/main_menu.gd" id="1_06t4h"]
-[ext_resource type="StyleBox" uid="uid://ck5shjosq5vto" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tilemap/t.tres" id="2_7vrkn"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_pqjnt"]
 
@@ -68,7 +67,6 @@ custom_maximum_size = Vector2(150, 60)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_styles/normal = ExtResource("2_7vrkn")
 text = "START"
 
 [node name="QuitButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1470926924]
@@ -78,8 +76,16 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 offset_transform_position = Vector2(0, 35)
-theme_override_styles/normal = ExtResource("2_7vrkn")
 text = "ESCAPE"
+
+[node name="CreditsButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=323340869]
+custom_minimum_size = Vector2(80, 40)
+custom_maximum_size = Vector2(150, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Credits"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/CreditsButton" to="." method="_on_start_button_pressed"]
