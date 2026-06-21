@@ -15,6 +15,10 @@ run/main_scene="uid://wpvrjvkvmkkm"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*uid://bpkvyu7xypnxw"
+
 [display]
 
 window/size/viewport_width=640
