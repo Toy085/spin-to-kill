@@ -1,3 +1,17 @@
 [gd_scene format=3 uid="uid://76vhnc8fo7u5"]
 
-[node name="Node2D" type="Node2D" unique_id=1758197316]
+[node name="Node2D" type="Control" unique_id=329543784]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1761932110]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
