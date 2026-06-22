@@ -6,9 +6,9 @@ enum ItemType {
 	HEALTH, ## Increase health
 	SPEED, ## Player moves faster
 	DAMAGE, ## Deal more damage
-	MAGNET_RADIUS,    ## Essential for picking up coins
+	MAGNET_RADIUS, ## Increase magnet radius for picking up coins
 	COOLDOWN_REDUCTION, ## For the spin attack
-	GREED             ## More coins dropped during runs
+	GREED ## More coins dropped during runs
 }
 
 @export_group("Visuals & Info")
