@@ -1,5 +1,18 @@
 [gd_scene format=3 uid="uid://76vhnc8fo7u5"]
 
+[ext_resource type="Script" uid="uid://cfpd3cywwi666" path="res://scripts/shop.gd" id="1_bqhtw"]
+[ext_resource type="Texture2D" uid="uid://5p8osqfdqh8a" path="res://assets/images/🎰1.png" id="1_yogbl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yogbl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bqhtw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_durvn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e5qd0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3m5gk"]
+
 [node name="Node2D" type="Control" unique_id=329543784]
 layout_mode = 3
 anchors_preset = 15
@@ -7,6 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_bqhtw")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1761932110]
 layout_mode = 1
@@ -15,3 +29,74 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1857091385]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_yogbl")
+stretch_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="Slot1" type="TextureRect" parent="TextureRect" unique_id=1525482310]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 24.0
+offset_top = -16.0
+offset_right = 40.0
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="Slot2" type="TextureRect" parent="TextureRect" unique_id=655692992]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -16.0
+offset_right = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="Slot3" type="TextureRect" parent="TextureRect" unique_id=882210871]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -16.0
+offset_right = -24.0
+grow_horizontal = 0
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="SpinButton" type="Button" parent="TextureRect" unique_id=64243758]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.35
+anchor_top = 0.55
+anchor_right = 0.65
+anchor_bottom = 0.69
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yogbl")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_bqhtw")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_durvn")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_e5qd0")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3m5gk")
+
+[connection signal="pressed" from="TextureRect/SpinButton" to="." method="_on_spin_button_pressed"]
