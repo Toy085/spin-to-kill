@@ -1,0 +1,84 @@
+[gd_resource type="Resource" script_class="SpriteLabelAtlasSeperated" format=3 uid="uid://b133c0enr8mbw"]
+
+[ext_resource type="Texture2D" uid="uid://8e24o0dpwtq3" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0108.png" id="1_c27ae"]
+[ext_resource type="Script" uid="uid://dloeg70c6ddl4" path="res://addons/sprite_label/sprite_label_atlas_seperated.gd" id="1_jnm0l"]
+[ext_resource type="Texture2D" uid="uid://b1lll60xeoqce" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0109.png" id="2_5u0wc"]
+[ext_resource type="Texture2D" uid="uid://b3j8r07mqyxvq" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0110.png" id="3_kq6ud"]
+[ext_resource type="Texture2D" uid="uid://d3rl3bffl1wyi" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0111.png" id="4_lexfy"]
+[ext_resource type="Texture2D" uid="uid://7856yt0utg6n" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0112.png" id="5_sj56m"]
+[ext_resource type="Texture2D" uid="uid://cyr38irq3k38x" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0113.png" id="6_4dr0o"]
+[ext_resource type="Texture2D" uid="uid://dy0ee8qrnn3nt" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0114.png" id="7_s8pb8"]
+[ext_resource type="Texture2D" uid="uid://bfs1obo116au6" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0115.png" id="8_61rk6"]
+[ext_resource type="Texture2D" uid="uid://6tlg58c7drsl" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0116.png" id="9_k6jbe"]
+[ext_resource type="Texture2D" uid="uid://b4djvkbatceky" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0117.png" id="10_m6l45"]
+[ext_resource type="Texture2D" uid="uid://bmnr7p51x0n2s" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0118.png" id="11_m46hk"]
+[ext_resource type="Texture2D" uid="uid://qq2x2s3gehfd" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0119.png" id="12_ie5ri"]
+[ext_resource type="Texture2D" uid="uid://cup8sfhct7gml" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0120.png" id="13_eogvh"]
+[ext_resource type="Texture2D" uid="uid://ltm8swo72yys" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0126.png" id="14_wxlwe"]
+[ext_resource type="Texture2D" uid="uid://c2nddqw72i7ty" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0127.png" id="15_ljqhd"]
+[ext_resource type="Texture2D" uid="uid://bmeg38k5aw8yy" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0128.png" id="16_xfidg"]
+[ext_resource type="Texture2D" uid="uid://bwcycl7glrcvh" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0129.png" id="17_f3efs"]
+[ext_resource type="Texture2D" uid="uid://c0vvsabrva2rj" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0130.png" id="18_ugbha"]
+[ext_resource type="Texture2D" uid="uid://di7rxeuua2t6k" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0131.png" id="19_dn5yy"]
+[ext_resource type="Texture2D" uid="uid://b5ljmpoio8ppc" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0132.png" id="20_l3fur"]
+[ext_resource type="Texture2D" uid="uid://db055qb4b66jy" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0133.png" id="21_6pyqi"]
+[ext_resource type="Texture2D" uid="uid://oifkw4adhhh1" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0134.png" id="22_suf27"]
+[ext_resource type="Texture2D" uid="uid://ddd224mpewur6" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0135.png" id="23_0otan"]
+[ext_resource type="Texture2D" uid="uid://bj3due3031dym" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0136.png" id="24_a3utd"]
+[ext_resource type="Texture2D" uid="uid://btyyvuicby1wt" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0137.png" id="25_0n7iw"]
+[ext_resource type="Texture2D" uid="uid://cpmcf1hn4ynqb" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0138.png" id="26_6rqag"]
+[ext_resource type="Texture2D" uid="uid://duf7h3ty63es3" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0091.png" id="27_gpx5t"]
+[ext_resource type="Texture2D" uid="uid://c1wq15vniogah" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0093.png" id="28_ydwu0"]
+[ext_resource type="Texture2D" uid="uid://digxjo0e41e2d" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0094.png" id="29_vdx3c"]
+[ext_resource type="Texture2D" uid="uid://ds4rpup8rlerr" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0095.png" id="30_vu5y6"]
+[ext_resource type="Texture2D" uid="uid://di6raf1sro1cj" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0096.png" id="31_v20ow"]
+[ext_resource type="Texture2D" uid="uid://dd63akssafy0q" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0097.png" id="32_qcalq"]
+[ext_resource type="Texture2D" uid="uid://b8ohq0hj5l7tu" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0098.png" id="33_647iu"]
+[ext_resource type="Texture2D" uid="uid://d2qkpyq1t64jp" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0099.png" id="34_mblso"]
+[ext_resource type="Texture2D" uid="uid://b3e1hxlbci0y1" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0100.png" id="35_0hj28"]
+[ext_resource type="Texture2D" uid="uid://dvod3bdfkr5yq" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0101.png" id="36_o7l4x"]
+[ext_resource type="Texture2D" uid="uid://dsgvelhb1eec8" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0102.png" id="37_2amee"]
+
+[resource]
+script = ExtResource("1_jnm0l")
+glyphs = Dictionary[String, Texture2D]({
+" ": null,
+"+": ExtResource("27_gpx5t"),
+"0": ExtResource("28_ydwu0"),
+"1": ExtResource("29_vdx3c"),
+"2": ExtResource("30_vu5y6"),
+"3": ExtResource("31_v20ow"),
+"4": ExtResource("32_qcalq"),
+"5": ExtResource("33_647iu"),
+"6": ExtResource("34_mblso"),
+"7": ExtResource("35_0hj28"),
+"8": ExtResource("36_o7l4x"),
+"9": ExtResource("37_2amee"),
+"D": ExtResource("4_lexfy"),
+"E": ExtResource("5_sj56m"),
+"F": ExtResource("6_4dr0o"),
+"G": ExtResource("7_s8pb8"),
+"H": ExtResource("8_61rk6"),
+"I": ExtResource("9_k6jbe"),
+"J": ExtResource("10_m6l45"),
+"K": ExtResource("11_m46hk"),
+"L": ExtResource("12_ie5ri"),
+"M": ExtResource("13_eogvh"),
+"N": ExtResource("14_wxlwe"),
+"O": ExtResource("15_ljqhd"),
+"P": ExtResource("16_xfidg"),
+"Q": ExtResource("17_f3efs"),
+"R": ExtResource("18_ugbha"),
+"S": ExtResource("19_dn5yy"),
+"T": ExtResource("20_l3fur"),
+"U": ExtResource("21_6pyqi"),
+"V": ExtResource("22_suf27"),
+"W": ExtResource("23_0otan"),
+"X": ExtResource("24_a3utd"),
+"Y": ExtResource("25_0n7iw"),
+"Z": ExtResource("26_6rqag"),
+"a": ExtResource("1_c27ae"),
+"b": ExtResource("2_5u0wc"),
+"c": ExtResource("3_kq6ud")
+})
+metadata/_custom_type_script = "uid://dloeg70c6ddl4"

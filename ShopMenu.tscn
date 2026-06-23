@@ -2,6 +2,12 @@
 
 [ext_resource type="Script" uid="uid://cfpd3cywwi666" path="res://scripts/shop.gd" id="1_bqhtw"]
 [ext_resource type="Texture2D" uid="uid://5p8osqfdqh8a" path="res://assets/images/🎰1.png" id="1_yogbl"]
+[ext_resource type="Script" uid="uid://birhuj07rq07o" path="res://addons/sprite_label/sprite_label_node.gd" id="3_e5qd0"]
+[ext_resource type="Resource" uid="uid://b133c0enr8mbw" path="res://assets/fonts/kenney.tres" id="4_3m5gk"]
+[ext_resource type="Texture2D" uid="uid://bmeg38k5aw8yy" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0128.png" id="6_n1khl"]
+[ext_resource type="Texture2D" uid="uid://di7rxeuua2t6k" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0131.png" id="7_f4t0k"]
+[ext_resource type="Texture2D" uid="uid://6tlg58c7drsl" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0116.png" id="7_whn6i"]
+[ext_resource type="Texture2D" uid="uid://ltm8swo72yys" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0126.png" id="8_aibjm"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yogbl"]
 
@@ -98,5 +104,38 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_bqhtw")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_durvn")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_e5qd0")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3m5gk")
+
+[node name="SpriteLabel" type="HBoxContainer" parent="." unique_id=1483644138]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+script = ExtResource("3_e5qd0")
+text = "SPIN"
+atlas = ExtResource("4_3m5gk")
+metadata/_custom_type_script = "uid://birhuj07rq07o"
+
+[node name="@TextureRect@124227" type="TextureRect" parent="SpriteLabel" unique_id=1865943402]
+layout_mode = 2
+texture = ExtResource("7_f4t0k")
+stretch_mode = 2
+
+[node name="@TextureRect@124228" type="TextureRect" parent="SpriteLabel" unique_id=1589551927]
+layout_mode = 2
+texture = ExtResource("6_n1khl")
+stretch_mode = 2
+
+[node name="@TextureRect@124229" type="TextureRect" parent="SpriteLabel" unique_id=1751971494]
+layout_mode = 2
+texture = ExtResource("7_whn6i")
+stretch_mode = 2
+
+[node name="@TextureRect@124230" type="TextureRect" parent="SpriteLabel" unique_id=1769695588]
+layout_mode = 2
+texture = ExtResource("8_aibjm")
+stretch_mode = 2
 
 [connection signal="pressed" from="TextureRect/SpinButton" to="." method="_on_spin_button_pressed"]
