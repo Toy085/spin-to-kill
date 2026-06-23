@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ShopItem" format=3 uid="uid://dot5aaypw6wg2"]
+
+[ext_resource type="Script" uid="uid://c8mxrawv7fowy" path="res://scripts/ShopItem.gd" id="1_7374r"]
+[ext_resource type="Texture2D" uid="uid://cmfyjioci8dyx" path="res://assets/images/ShopIcons.png" id="1_w6yxu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w6yxu"]
+atlas = ExtResource("1_w6yxu")
+region = Rect2(16, 0, 16, 16)
+
+[resource]
+script = ExtResource("1_7374r")
+item_name = "Damage"
+icon = SubResource("AtlasTexture_w6yxu")
+type = 2
+metadata/_custom_type_script = "uid://c8mxrawv7fowy"

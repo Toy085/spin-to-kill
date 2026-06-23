@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ShopItem" format=3 uid="uid://doqg333bk1bto"]
+
+[ext_resource type="Texture2D" uid="uid://cmfyjioci8dyx" path="res://assets/images/ShopIcons.png" id="1_hsdes"]
+[ext_resource type="Script" uid="uid://c8mxrawv7fowy" path="res://scripts/ShopItem.gd" id="1_n7n0s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7n0s"]
+atlas = ExtResource("1_hsdes")
+region = Rect2(32, 0, 16, 16)
+
+[resource]
+script = ExtResource("1_n7n0s")
+item_name = "MAGNET RADIUS"
+icon = SubResource("AtlasTexture_n7n0s")
+type = 3
+metadata/_custom_type_script = "uid://c8mxrawv7fowy"
