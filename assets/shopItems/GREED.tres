@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ShopItem" format=3 uid="uid://dk8argibsguu3"]
+
+[ext_resource type="Texture2D" uid="uid://cmfyjioci8dyx" path="res://assets/images/ShopIcons.png" id="1_12ds8"]
+[ext_resource type="Script" uid="uid://c8mxrawv7fowy" path="res://scripts/ShopItem.gd" id="1_vgv2l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12ds8"]
+atlas = ExtResource("1_12ds8")
+region = Rect2(16, 16, 16, 16)
+
+[resource]
+script = ExtResource("1_vgv2l")
+item_name = "Greed"
+description = "Enemies drop more coins"
+icon = SubResource("AtlasTexture_12ds8")
+type = 5
+metadata/_custom_type_script = "uid://c8mxrawv7fowy"

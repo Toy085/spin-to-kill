@@ -1,12 +1,42 @@
 [gd_scene format=3 uid="uid://76vhnc8fo7u5"]
 
-[node name="Node2D" type="Control" unique_id=329543784]
+[ext_resource type="Script" uid="uid://cfpd3cywwi666" path="res://scripts/shop.gd" id="1_bqhtw"]
+[ext_resource type="Texture2D" uid="uid://5p8osqfdqh8a" path="res://assets/images/🎰1.png" id="1_yogbl"]
+[ext_resource type="Script" uid="uid://c8mxrawv7fowy" path="res://scripts/ShopItem.gd" id="2_durvn"]
+[ext_resource type="Resource" uid="uid://dk8argibsguu3" path="res://assets/shopItems/GREED.tres" id="3_31hie"]
+[ext_resource type="Script" uid="uid://birhuj07rq07o" path="res://addons/sprite_label/sprite_label_node.gd" id="3_e5qd0"]
+[ext_resource type="Resource" uid="uid://b133c0enr8mbw" path="res://assets/fonts/kenney.tres" id="4_3m5gk"]
+[ext_resource type="Resource" uid="uid://dl7574f0my21x" path="res://assets/shopItems/speed.tres" id="4_jf33j"]
+[ext_resource type="Resource" uid="uid://dot5aaypw6wg2" path="res://assets/shopItems/Damage.tres" id="5_jc8js"]
+[ext_resource type="Resource" uid="uid://826esu6bhvvg" path="res://assets/shopItems/health.tres" id="6_108c6"]
+[ext_resource type="Texture2D" uid="uid://bmeg38k5aw8yy" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0128.png" id="6_n1khl"]
+[ext_resource type="Resource" uid="uid://doqg333bk1bto" path="res://assets/shopItems/MAGNET_RADIUS.tres" id="7_534mg"]
+[ext_resource type="Texture2D" uid="uid://di7rxeuua2t6k" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0131.png" id="7_f4t0k"]
+[ext_resource type="Texture2D" uid="uid://6tlg58c7drsl" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0116.png" id="7_whn6i"]
+[ext_resource type="Texture2D" uid="uid://ltm8swo72yys" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0126.png" id="8_aibjm"]
+[ext_resource type="Resource" uid="uid://co8lpd0ckcnde" path="res://assets/shopItems/COOLDOWN_REDUCTION.tres" id="8_vjohh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yogbl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bqhtw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_durvn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e5qd0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3m5gk"]
+
+[node name="Node2D" type="Control" unique_id=329543784 node_paths=PackedStringArray("slots", "shopslot")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_bqhtw")
+item_pool = Array[ExtResource("2_durvn")]([ExtResource("8_vjohh"), ExtResource("7_534mg"), ExtResource("6_108c6"), ExtResource("5_jc8js"), ExtResource("4_jf33j"), ExtResource("3_31hie")])
+slots = [NodePath("TextureRect/Slot1"), NodePath("TextureRect/Slot2"), NodePath("TextureRect/Slot3")]
+shopslot = NodePath("TextureRect")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1761932110]
 layout_mode = 1
@@ -15,3 +45,120 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="SpriteLabel" type="HBoxContainer" parent="." unique_id=1483644138]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 286.0
+offset_top = 218.0
+offset_right = 286.0
+offset_bottom = 218.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+script = ExtResource("3_e5qd0")
+text = "SPIN"
+atlas = ExtResource("4_3m5gk")
+metadata/_custom_type_script = "uid://birhuj07rq07o"
+
+[node name="@TextureRect@124227" type="TextureRect" parent="SpriteLabel" unique_id=1865943402]
+layout_mode = 2
+texture = ExtResource("7_f4t0k")
+stretch_mode = 2
+
+[node name="@TextureRect@124228" type="TextureRect" parent="SpriteLabel" unique_id=1589551927]
+layout_mode = 2
+texture = ExtResource("6_n1khl")
+stretch_mode = 2
+
+[node name="@TextureRect@124229" type="TextureRect" parent="SpriteLabel" unique_id=1751971494]
+layout_mode = 2
+texture = ExtResource("7_whn6i")
+stretch_mode = 2
+
+[node name="@TextureRect@124230" type="TextureRect" parent="SpriteLabel" unique_id=1769695588]
+layout_mode = 2
+texture = ExtResource("8_aibjm")
+stretch_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1857091385]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_yogbl")
+stretch_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="Slot1" type="TextureRect" parent="TextureRect" unique_id=1525482310]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 24.0
+offset_top = -16.0
+offset_right = 40.0
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="Slot2" type="TextureRect" parent="TextureRect" unique_id=655692992]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -16.0
+offset_right = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="Slot3" type="TextureRect" parent="TextureRect" unique_id=882210871]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -16.0
+offset_right = -24.0
+grow_horizontal = 0
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="SpinButton" type="Button" parent="TextureRect" unique_id=64243758]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.35
+anchor_top = 0.55
+anchor_right = 0.65
+anchor_bottom = 0.69
+offset_bottom = 5.080002
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yogbl")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_bqhtw")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_durvn")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_e5qd0")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3m5gk")
+
+[node name="SlotTimer" type="Timer" parent="." unique_id=1503335962]
+wait_time = 0.1
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=152637686]
+position = Vector2(320, 180)
+zoom = Vector2(3, 3)
+
+[connection signal="pressed" from="TextureRect/SpinButton" to="." method="_on_spin_button_pressed"]
+[connection signal="timeout" from="SlotTimer" to="." method="_on_slot_timer_timeout"]

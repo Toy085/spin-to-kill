@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ShopItem" format=3 uid="uid://co8lpd0ckcnde"]
+
+[ext_resource type="Script" uid="uid://c8mxrawv7fowy" path="res://scripts/ShopItem.gd" id="1_r0e6t"]
+[ext_resource type="Texture2D" uid="uid://cmfyjioci8dyx" path="res://assets/images/ShopIcons.png" id="1_v83b5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0e6t"]
+atlas = ExtResource("1_v83b5")
+region = Rect2(0, 16, 16, 16)
+
+[resource]
+script = ExtResource("1_r0e6t")
+item_name = "COOLDOWN REDUCTION"
+description = "Spin faster!"
+icon = SubResource("AtlasTexture_r0e6t")
+type = 4
+metadata/_custom_type_script = "uid://c8mxrawv7fowy"
