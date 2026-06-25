@@ -1,9 +1,7 @@
 [gd_scene format=3 uid="uid://wpvrjvkvmkkm"]
 
 [ext_resource type="Script" uid="uid://cc3hrq6ovf61t" path="res://scripts/main_menu.gd" id="1_06t4h"]
-[ext_resource type="PackedScene" uid="uid://b61xdoto8k42v" path="res://player.tscn" id="2_glbon"]
 [ext_resource type="Theme" uid="uid://dmum6lfqbfasj" path="res://assets/Themes/menu_button.tres" id="2_jix8l"]
-[ext_resource type="Script" uid="uid://vhoympuivnho" path="res://player.gd" id="3_nlkkf"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_pqjnt"]
 
@@ -37,12 +35,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("CanvasTexture_pqjnt")
-
-[node name="Player" parent="." unique_id=574410524 instance=ExtResource("2_glbon")]
-position = Vector2(78, 147)
-script = ExtResource("3_nlkkf")
-
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1070539797]
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1098200185]
 custom_minimum_size = Vector2(300, 0)
