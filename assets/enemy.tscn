@@ -21,6 +21,9 @@ animations = [{
 "speed": 4.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oaf1g"]
+size = Vector2(32, 32)
+
 [node name="Enemy" type="CharacterBody2D" unique_id=217610538 groups=["enemy"]]
 script = ExtResource("1_pw0vb")
 
@@ -32,3 +35,9 @@ shape = SubResource("RectangleShape2D_gs0tk")
 sprite_frames = SubResource("SpriteFrames_oaf1g")
 autoplay = "default"
 frame_progress = 0.47773534
+
+[node name="AttactArea" type="Area2D" parent="." unique_id=1528390596]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttactArea" unique_id=2119881822]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_oaf1g")

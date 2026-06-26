@@ -7,6 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://duvphv4qv6q86" path="res://pause_menu.tscn" id="4_aqk2v"]
 [ext_resource type="Script" uid="uid://bgsh0ljk2b3gy" path="res://scripts/hud.gd" id="6_dwbse"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dwbse"]
+bg_color = Color(0.91915226, 0.37215286, 0.31346127, 1)
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+
 [node name="Node2D" type="Node2D" unique_id=183599338]
 
 [node name="Ground" type="TileMapLayer" parent="." unique_id=644314562]
@@ -48,9 +53,20 @@ script = ExtResource("6_dwbse")
 
 [node name="CoinLabel" type="RichTextLabel" parent="CanvasLayer/HUD" unique_id=1946330892]
 layout_mode = 1
-offset_right = 250.0
-offset_bottom = 40.0
+offset_left = 2.0
+offset_top = 27.0
+offset_right = 252.0
+offset_bottom = 50.0
 bbcode_enabled = true
 text = "COINS: [outline_size=6][color=gold]6767[/color][/outline_size]"
+
+[node name="HealthBar" type="ProgressBar" parent="CanvasLayer/HUD" unique_id=690985730]
+layout_mode = 0
+offset_right = 227.0
+offset_bottom = 27.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_dwbse")
+step = 1.0
+value = 50.0
+show_percentage = false
 
 [connection signal="timeout" from="Enemy spawner/SpawnTimer" to="Enemy spawner" method="_on_spawn_timer_timeout"]
