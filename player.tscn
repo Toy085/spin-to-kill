@@ -44,3 +44,4 @@ frame_progress = 0.531028
 shape = SubResource("CapsuleShape2D_lhmx6")
 
 [node name="Axe" parent="." unique_id=1107923764 instance=ExtResource("2_i3pqv")]
+position = Vector2(0, -17)

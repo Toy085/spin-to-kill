@@ -11,4 +11,5 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_body_entered(body: Node2D) -> void:
-	print("Entered by: ", body.name)
+	if body.is_in_group("enemy"):
+		body.damage(5)
