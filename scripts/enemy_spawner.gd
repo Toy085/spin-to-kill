@@ -16,4 +16,3 @@ func _on_spawn_timer_timeout() -> void:
 	new_enemy.global_position = global_position + Vector2(random_x, random_y)
 	
 	get_tree().current_scene.add_child(new_enemy)
-	print(global_position + Vector2(random_x, random_y))
