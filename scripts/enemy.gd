@@ -21,7 +21,7 @@ func damage(damage: int):
 	health -= damage
 
 func die():
-	var reward = randi_range(1, 5)
+	var reward = randi_range(1, 5 + Global.greed)
 	Global.current_run_money += reward
 	
 	queue_free()

@@ -49,3 +49,6 @@ visible = false
 
 [node name="Axe" parent="AxePivot" unique_id=1107923764 instance=ExtResource("2_i3pqv")]
 position = Vector2(0, -17)
+
+[node name="Timer" type="Timer" parent="." unique_id=1261437021]
+one_shot = true
