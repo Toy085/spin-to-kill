@@ -14,6 +14,7 @@ var shoptexturepressed: Texture2D
 
 var rolleditems: Array[ShopItem] = [null, null, null]
 var is_spinning: bool = false
+var spun: bool = false
 var current_tick: int = 0
 
 func _ready() -> void:
@@ -29,8 +30,12 @@ func _on_spin_button_pressed() -> void:
 
 	if item_pool.is_empty():
 		return
+		
+	if spun:
+		return
 
 	is_spinning = true
+	spun = true
 	current_tick = 0
 
 	if shopslot and shoptexturepressed:

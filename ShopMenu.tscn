@@ -4,16 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://5p8osqfdqh8a" path="res://assets/images/🎰1.png" id="1_yogbl"]
 [ext_resource type="Script" uid="uid://c8mxrawv7fowy" path="res://scripts/ShopItem.gd" id="2_durvn"]
 [ext_resource type="Resource" uid="uid://dk8argibsguu3" path="res://assets/shopItems/GREED.tres" id="3_31hie"]
-[ext_resource type="Script" uid="uid://birhuj07rq07o" path="res://addons/sprite_label/sprite_label_node.gd" id="3_e5qd0"]
-[ext_resource type="Resource" uid="uid://b133c0enr8mbw" path="res://assets/fonts/kenney.tres" id="4_3m5gk"]
 [ext_resource type="Resource" uid="uid://dl7574f0my21x" path="res://assets/shopItems/speed.tres" id="4_jf33j"]
 [ext_resource type="Resource" uid="uid://dot5aaypw6wg2" path="res://assets/shopItems/Damage.tres" id="5_jc8js"]
 [ext_resource type="Resource" uid="uid://826esu6bhvvg" path="res://assets/shopItems/health.tres" id="6_108c6"]
-[ext_resource type="Texture2D" uid="uid://bmeg38k5aw8yy" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0128.png" id="6_n1khl"]
 [ext_resource type="Resource" uid="uid://doqg333bk1bto" path="res://assets/shopItems/MAGNET_RADIUS.tres" id="7_534mg"]
-[ext_resource type="Texture2D" uid="uid://di7rxeuua2t6k" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0131.png" id="7_f4t0k"]
-[ext_resource type="Texture2D" uid="uid://6tlg58c7drsl" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0116.png" id="7_whn6i"]
-[ext_resource type="Texture2D" uid="uid://ltm8swo72yys" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tiles/tile_0126.png" id="8_aibjm"]
 [ext_resource type="Resource" uid="uid://co8lpd0ckcnde" path="res://assets/shopItems/COOLDOWN_REDUCTION.tres" id="8_vjohh"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yogbl"]
@@ -45,43 +39,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="SpriteLabel" type="HBoxContainer" parent="." unique_id=1483644138]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 286.0
-offset_top = 218.0
-offset_right = 286.0
-offset_bottom = 218.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 0
-script = ExtResource("3_e5qd0")
-text = "SPIN"
-atlas = ExtResource("4_3m5gk")
-metadata/_custom_type_script = "uid://birhuj07rq07o"
-
-[node name="@TextureRect@124227" type="TextureRect" parent="SpriteLabel" unique_id=1865943402]
-layout_mode = 2
-texture = ExtResource("7_f4t0k")
-stretch_mode = 2
-
-[node name="@TextureRect@124228" type="TextureRect" parent="SpriteLabel" unique_id=1589551927]
-layout_mode = 2
-texture = ExtResource("6_n1khl")
-stretch_mode = 2
-
-[node name="@TextureRect@124229" type="TextureRect" parent="SpriteLabel" unique_id=1751971494]
-layout_mode = 2
-texture = ExtResource("7_whn6i")
-stretch_mode = 2
-
-[node name="@TextureRect@124230" type="TextureRect" parent="SpriteLabel" unique_id=1769695588]
-layout_mode = 2
-texture = ExtResource("8_aibjm")
-stretch_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1857091385]
 layout_mode = 1
