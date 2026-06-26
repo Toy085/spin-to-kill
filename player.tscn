@@ -33,6 +33,7 @@ height = 18.0
 [node name="Player" type="CharacterBody2D" unique_id=574410524]
 script = ExtResource("1_onrkg")
 speed = 100.0
+spin_speed = 16.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=238514458 groups=["player"]]
 sprite_frames = SubResource("SpriteFrames_lhmx6")
@@ -43,5 +44,8 @@ frame_progress = 0.531028
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=439010516]
 shape = SubResource("CapsuleShape2D_lhmx6")
 
-[node name="Axe" parent="." unique_id=1107923764 instance=ExtResource("2_i3pqv")]
+[node name="AxePivot" type="Node2D" parent="." unique_id=254158068]
+visible = false
+
+[node name="Axe" parent="AxePivot" unique_id=1107923764 instance=ExtResource("2_i3pqv")]
 position = Vector2(0, -17)
