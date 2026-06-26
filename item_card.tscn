@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://du617ihphaqyi" path="res://scripts/item_card.gd" id="1_xhbri"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_xhbri"]
+font_size = 8
+
 [sub_resource type="LabelSettings" id="LabelSettings_gs0tk"]
 font_size = 8
 
@@ -18,11 +21,14 @@ layout_mode = 2
 [node name="ItemName" type="Label" parent="VBoxContainer" unique_id=849212853]
 layout_mode = 2
 text = "LOREM"
+label_settings = SubResource("LabelSettings_xhbri")
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="ItemIcon" type="TextureRect" parent="VBoxContainer" unique_id=1551517977]
 layout_mode = 2
+stretch_mode = 5
 
 [node name="Description" type="Label" parent="VBoxContainer" unique_id=522774063]
 layout_mode = 2
@@ -35,3 +41,5 @@ clip_text = true
 [node name="BuyButton" type="Button" parent="VBoxContainer" unique_id=2065561019]
 layout_mode = 2
 text = "BUY"
+
+[connection signal="pressed" from="VBoxContainer/BuyButton" to="." method="_on_buy_button_pressed"]

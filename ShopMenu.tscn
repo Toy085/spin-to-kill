@@ -37,6 +37,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -6.0
+offset_right = 1.0
+offset_bottom = -6.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -116,7 +120,37 @@ wait_time = 0.1
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=152637686]
 position = Vector2(320, 180)
-zoom = Vector2(3, 3)
+zoom = Vector2(2, 2)
+
+[node name="CardContainer" type="HBoxContainer" parent="." unique_id=1388327494]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 193.0
+offset_top = -90.0
+offset_right = -193.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ExitButton" type="Button" parent="." unique_id=1256099989]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -18.5
+offset_top = -121.0
+offset_right = 18.5
+offset_bottom = -90.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Exit
+
+"
 
 [connection signal="pressed" from="TextureRect/SpinButton" to="." method="_on_spin_button_pressed"]
 [connection signal="timeout" from="SlotTimer" to="." method="_on_slot_timer_timeout"]
