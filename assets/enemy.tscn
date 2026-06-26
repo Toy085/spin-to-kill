@@ -41,3 +41,10 @@ frame_progress = 0.47773534
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttactArea" unique_id=2119881822]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_oaf1g")
+
+[node name="AttactCooldown" type="Timer" parent="." unique_id=684558751]
+autostart = true
+
+[connection signal="body_entered" from="AttactArea" to="." method="_on_attact_area_body_entered"]
+[connection signal="body_exited" from="AttactArea" to="." method="_on_attact_area_body_exited"]
+[connection signal="timeout" from="AttactCooldown" to="." method="_on_attact_cooldown_timeout"]
