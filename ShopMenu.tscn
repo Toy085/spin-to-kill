@@ -53,11 +53,12 @@ offset_right = 64.0
 offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("1_yogbl")
 stretch_mode = 2
 metadata/_edit_lock_ = true
 
-[node name="Slot1" type="TextureRect" parent="TextureRect" unique_id=1525482310]
+[node name="Slot1" type="TextureRect" parent="TextureRect" unique_id=1716617483]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -68,7 +69,7 @@ offset_right = 40.0
 grow_vertical = 2
 metadata/_edit_lock_ = true
 
-[node name="Slot2" type="TextureRect" parent="TextureRect" unique_id=655692992]
+[node name="Slot2" type="TextureRect" parent="TextureRect" unique_id=1693894758]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -82,7 +83,7 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_lock_ = true
 
-[node name="Slot3" type="TextureRect" parent="TextureRect" unique_id=882210871]
+[node name="Slot3" type="TextureRect" parent="TextureRect" unique_id=190717732]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
