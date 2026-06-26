@@ -154,3 +154,4 @@ text = "Exit
 
 [connection signal="pressed" from="TextureRect/SpinButton" to="." method="_on_spin_button_pressed"]
 [connection signal="timeout" from="SlotTimer" to="." method="_on_slot_timer_timeout"]
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

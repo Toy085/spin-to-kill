@@ -82,6 +82,7 @@ theme = ExtResource("2_jix8l")
 text = "QUIT"
 
 [node name="CreditsButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=323340869]
+visible = false
 custom_minimum_size = Vector2(80, 40)
 custom_maximum_size = Vector2(150, 60)
 layout_mode = 2
