@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 @export var speed : float = 50
 
+@onready var coin: PackedScene = preload("res://coin.tscn")
+
 var player
 var health = 10
 
@@ -22,6 +24,9 @@ func damage(damage: int):
 
 func die():
 	var reward = randi_range(1 + Global.greed, 5 + Global.greed)
-	Global.current_run_money += reward
 	
+	for i in range(reward):
+		var coin_instance = coin.instantiate()
+		coin_instance.global_position = global_position
+		get_parent().add_child(coin_instance)
 	queue_free()

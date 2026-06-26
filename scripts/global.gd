@@ -7,7 +7,7 @@ var health: int = 10 # done
 var speed: int = 300 # done
 var damage: int = 5 # done
 var greed: int = 0 # done
-var coin_radius: float = 6
+var coin_radius: float = 16
 
 func player_died():
 	total_money += current_run_money
