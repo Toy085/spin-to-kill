@@ -2,11 +2,11 @@ extends Node
 
 var total_money : int = 0
 var current_run_money : int = 0
-var cooldown: float = 0.75
-var health: int = 10
-var speed: int = 300
-var damage: int = 5
-var greed: int = 0
+var cooldown: float = 0.75 # done
+var health: int = 10 # done
+var speed: int = 300 # done
+var damage: int = 5 # done
+var greed: int = 0 # done
 var coin_radius: float = 6
 
 func player_died():

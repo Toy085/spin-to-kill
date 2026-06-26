@@ -20,10 +20,10 @@ func _physics_process(delta:float) -> void:
 	if Input.is_action_just_pressed("attack") and not is_spinning and cooldown_timer.is_stopped():
 		is_spinning = true
 		axe_pivot.show()
-		
+
 	if is_spinning:
 		axe_pivot.rotation += spin_speed * delta
-		
+
 		if axe_pivot.rotation >= TAU: # Stop rotation at 360
 			axe_pivot.rotation = 0
 			is_spinning = false

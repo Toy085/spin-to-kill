@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://br34pbtviltc" path="res://assets/enemy.tscn" id="2_fj7yv"]
 [ext_resource type="Script" uid="uid://bacygmvkp0iqp" path="res://scripts/enemy_spawner.gd" id="3_tlwt5"]
 [ext_resource type="PackedScene" uid="uid://duvphv4qv6q86" path="res://pause_menu.tscn" id="4_aqk2v"]
+[ext_resource type="Script" uid="uid://bgsh0ljk2b3gy" path="res://scripts/hud.gd" id="6_dwbse"]
 
 [node name="Node2D" type="Node2D" unique_id=183599338]
 
@@ -35,5 +36,21 @@ autostart = true
 
 [node name="PauseMenu" parent="CanvasLayer" unique_id=1166785966 instance=ExtResource("4_aqk2v")]
 visible = false
+
+[node name="HUD" type="Control" parent="CanvasLayer" unique_id=1660999193]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("6_dwbse")
+
+[node name="CoinLabel" type="RichTextLabel" parent="CanvasLayer/HUD" unique_id=1946330892]
+layout_mode = 1
+offset_right = 250.0
+offset_bottom = 40.0
+bbcode_enabled = true
+text = "COINS: [outline_size=6][color=gold]6767[/color][/outline_size]"
 
 [connection signal="timeout" from="Enemy spawner/SpawnTimer" to="Enemy spawner" method="_on_spawn_timer_timeout"]
