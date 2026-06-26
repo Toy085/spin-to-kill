@@ -1,12 +1,17 @@
-extends Area2D
+extends CharacterBody2D
 
-# Called when the node enters the scene tree for the first time.
+@export var speed : float = 50
+
+var player
+
 func _ready() -> void:
-	pass # Replace with function body.
+	player = get_tree().get_first_node_in_group("player")
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if player:
+		var direction = (player.global_position - global_position).normalized()
+		velocity = direction * speed
+		move_and_slide()
 
 func die():
 	var reward = randi_range(1, 5)

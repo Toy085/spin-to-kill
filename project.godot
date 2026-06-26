@@ -35,6 +35,10 @@ version_control/autoload_on_startup=true
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg", "res://addons/sprite_label/plugin.cfg")
 
+[global_group]
+
+player=""
+
 [input]
 
 left={
