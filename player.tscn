@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cxsri8aha16tj" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Players/Tilemap/tilemap.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://vhoympuivnho" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="PackedScene" uid="uid://5vq00ew7phmv" path="res://axe.tscn" id="2_i3pqv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_onrkg"]
 atlas = ExtResource("1_4flbx")
@@ -41,3 +42,5 @@ frame_progress = 0.531028
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=439010516]
 shape = SubResource("CapsuleShape2D_lhmx6")
+
+[node name="Axe" parent="." unique_id=1107923764 instance=ExtResource("2_i3pqv")]
