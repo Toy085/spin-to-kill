@@ -2,13 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://ddfoi0wfsvi" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0118.png" id="1_sykeo"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sykeo"]
+size = Vector2(16, 16)
+
 [node name="Axe" type="Area2D" unique_id=1107923764]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=472550666]
-position = Vector2(10, 0)
 texture = ExtResource("1_sykeo")
-offset = Vector2(2, 0)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=721527406]
-position = Vector2(10, 0)
-polygon = PackedVector2Array(0, 7, 2, 7, 2, 4, 7, 0, 7, -4, 4, -7, -4, -7, -7, -4, -7, 0, -2, 4, -2, 7)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1475772434]
+shape = SubResource("RectangleShape2D_sykeo")
