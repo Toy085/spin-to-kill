@@ -5,7 +5,7 @@ var current_run_money : int = 0
 var cooldown: float = 0.75 # done
 var health: int
 var max_health: int = 100
-var speed: int = 300 # done
+var speed: int = 100 # done
 var damage: int = 5 # done
 var greed: int = 0 # done
 var coin_radius: float = 20

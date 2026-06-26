@@ -32,7 +32,7 @@ height = 18.0
 
 [node name="Player" type="CharacterBody2D" unique_id=574410524 groups=["player"]]
 script = ExtResource("1_onrkg")
-speed = 100.0
+speed = 300.0
 spin_speed = 16.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=238514458 groups=["player"]]

@@ -3,7 +3,7 @@ extends CharacterBody2D
 @onready var axe_pivot: Node2D = $AxePivot
 @onready var cooldown_timer = $Timer
 
-@export var speed : float = 300
+@export var speed : float = Global.speed
 @export var spin_speed: float = 12
 
 var is_spinning: bool = false
@@ -11,6 +11,7 @@ var is_spinning: bool = false
 func _ready() -> void:
 	cooldown_timer.wait_time = Global.cooldown
 	Global.health = Global.max_health
+	speed = Global.speed
 
 func _physics_process(delta:float) -> void:
 	var input_vector = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")

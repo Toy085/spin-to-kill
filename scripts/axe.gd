@@ -11,5 +11,5 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.is_in_group("enemy"):
+	if body.is_in_group("enemy") and is_visible_in_tree():
 		body.damage(Global.damage)
