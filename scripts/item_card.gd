@@ -1,4 +1,3 @@
-# shop_card.gd
 extends PanelContainer
 
 signal bought
@@ -19,15 +18,16 @@ func setup_card(item: ShopItem) -> void:
 	current_item = item
 	show()
 	
-	# Calculate price based on item level progression
-	current_price = int(item.base_price * pow(item.price_multiplier_per_level, item.current_level))
+	var saved_level = Global.get_item_level(item.item_name)
+	
+	current_price = int(item.base_price * pow(item.price_multiplier_per_level, saved_level))
 	
 	# Set UI texts
 	item_name_label.text = item.item_name
 	item_icon.texture = item.icon
 	description_label.text = item.description
 	
-	if item.current_level >= item.max_level:
+	if saved_level >= item.max_level:
 		buy_button.text = "MAXED"
 		buy_button.disabled = true
 	else:
@@ -35,12 +35,24 @@ func setup_card(item: ShopItem) -> void:
 		buy_button.disabled = false
 
 func _on_buy_button_pressed() -> void:
-	if not current_item or Global.total_money < current_price:
+	if not current_item:
+		return
+		
+	# Fetch current level tracker from global
+	var current_lvl = Global.get_item_level(current_item.item_name)
+		
+	if current_lvl >= current_item.max_level:
+		print("Item is already at max level!")
+		return
+		
+	if Global.total_money < current_price:
 		print("Not enough money!")
 		return
 		
 	Global.total_money -= current_price
-	current_item.current_level += 1
+	current_lvl += 1
+	
+	Global.save_item_level(current_item.item_name, current_lvl)
 	
 	match current_item.type:
 		ShopItem.ItemType.HEALTH:
@@ -57,7 +69,6 @@ func _on_buy_button_pressed() -> void:
 		ShopItem.ItemType.GREED:
 			Global.greed += int(current_item.stat_modifier)
 			
-	# Notify the main shop scene to refresh prices or close
 	bought.emit()
 	
 	# Update or disable card after purchase
