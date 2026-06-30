@@ -31,7 +31,8 @@ func die() -> void:
 	
 	for i in range(reward):
 		var coin_instance = coin.instantiate()
-		coin_instance.global_position = global_position
+		var coin_pos = Vector2(randi_range(-32, 32), randi_range(-32, 32))
+		coin_instance.global_position = global_position + coin_pos
 		get_parent().add_child(coin_instance)
 	queue_free()
 
