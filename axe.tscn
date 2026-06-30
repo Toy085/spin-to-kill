@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ddfoi0wfsvi" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0118.png" id="1_sykeo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sykeo"]
-size = Vector2(16, 16)
+size = Vector2(18, 20)
 
 [node name="Axe" type="Area2D" unique_id=1107923764]
 script = ExtResource("1_7dw2v")
