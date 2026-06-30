@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @onready var axe_pivot: Node2D = $AxePivot
 @onready var cooldown_timer = $Timer
+@onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 
 @export var speed : float = Global.speed
 @export var spin_speed: float = 12
@@ -16,6 +17,10 @@ func _ready() -> void:
 func _physics_process(delta:float) -> void:
 	var input_vector = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	velocity = input_vector * speed
+	if anim and velocity != Vector2.ZERO:
+		anim.play()
+	else:
+		anim.pause()
 	move_and_slide()
 
 	if Input.is_action_just_pressed("attack") and not is_spinning and cooldown_timer.is_stopped():
