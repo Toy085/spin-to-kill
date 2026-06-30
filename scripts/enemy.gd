@@ -9,7 +9,7 @@ extends CharacterBody2D
 var player_in_range: CharacterBody2D = null
 
 var player
-var health = 10
+var health = randi_range(5, 20)
 
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("player")

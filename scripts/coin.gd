@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var magnet_speed := 500.0
+@export var magnet_speed := 300.0
 var player
 
 func _ready() -> void:
