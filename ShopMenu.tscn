@@ -152,6 +152,15 @@ text = "Exit
 
 "
 
+[node name="CoinLabel" type="RichTextLabel" parent="." unique_id=43889426]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 90.0
+offset_right = 410.0
+offset_bottom = 113.0
+bbcode_enabled = true
+text = "[color=black]COINS: [outline_size=6][color=gold]6767[/color][/outline_size]"
+
 [connection signal="pressed" from="TextureRect/SpinButton" to="." method="_on_spin_button_pressed"]
 [connection signal="timeout" from="SlotTimer" to="." method="_on_slot_timer_timeout"]
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

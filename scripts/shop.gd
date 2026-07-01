@@ -9,6 +9,7 @@ extends Control
 @export var card_scene: PackedScene = preload("res://item_card.tscn")
 
 @onready var card_container = $CardContainer
+@onready var coinlabel: RichTextLabel = $CoinLabel
 
 @onready var SlotTimer = $SlotTimer
 
@@ -29,6 +30,9 @@ func _ready() -> void:
 		
 	if card_container:
 		card_container.hide()
+		
+	if coinlabel:
+		coinlabel.text = "[color=black]COINS: [outline_size=6][color=gold]" + str(Global.total_money) + "[/color][/outline_size]"
 
 func _on_spin_button_pressed() -> void:
 	if is_spinning:
