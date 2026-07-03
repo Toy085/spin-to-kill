@@ -27,10 +27,14 @@ func _physics_process(delta:float) -> void:
 		anim.pause()
 	move_and_slide()
 
-	if Input.is_action_just_pressed("attack") and not is_spinning and cooldown_timer.is_stopped():
+	if Input.is_action_just_pressed("spin_cw") and not is_spinning and cooldown_timer.is_stopped():
 		is_spinning = true
 		axe_pivot.show()
 		spin_cw = true
+	elif Input.is_action_just_pressed("spin_ccw") and not is_spinning and cooldown_timer.is_stopped():
+		is_spinning = true
+		axe_pivot.show()
+		spin_cw = false
 
 	if is_spinning and spin_cw:
 		axe_pivot.rotation += spin_speed * delta
