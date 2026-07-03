@@ -8,6 +8,7 @@ extends CharacterBody2D
 @export var spin_speed: float = 12
 
 var is_spinning: bool = false
+var spin_cw: bool = true
 
 func _ready() -> void:
 	cooldown_timer.wait_time = Global.cooldown
@@ -29,11 +30,18 @@ func _physics_process(delta:float) -> void:
 	if Input.is_action_just_pressed("attack") and not is_spinning and cooldown_timer.is_stopped():
 		is_spinning = true
 		axe_pivot.show()
+		spin_cw = true
 
-	if is_spinning:
+	if is_spinning and spin_cw:
 		axe_pivot.rotation += spin_speed * delta
-
 		if axe_pivot.rotation >= TAU: # Stop rotation at 360
+			axe_pivot.rotation = 0
+			is_spinning = false
+			axe_pivot.hide()
+			cooldown_timer.start()
+	elif is_spinning and not spin_cw:
+		axe_pivot.rotation -= spin_speed * delta
+		if axe_pivot.rotation <= -TAU:
 			axe_pivot.rotation = 0
 			is_spinning = false
 			axe_pivot.hide()
