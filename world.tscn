@@ -12,6 +12,8 @@ bg_color = Color(0.91915226, 0.37215286, 0.31346127, 1)
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_npkn0"]
+
 [node name="Node2D" type="Node2D" unique_id=183599338]
 
 [node name="Ground" type="TileMapLayer" parent="." unique_id=644314562]
@@ -72,5 +74,39 @@ show_percentage = false
 
 [node name="PauseMenu" parent="CanvasLayer" unique_id=1166785966 instance=ExtResource("4_aqk2v")]
 visible = false
+
+[node name="WorldWall1" type="StaticBody2D" parent="." unique_id=1151190965]
+position = Vector2(0, -1016)
+scale = Vector2(102.4, 0.819)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldWall1" unique_id=126750711]
+shape = SubResource("RectangleShape2D_npkn0")
+metadata/_edit_lock_ = true
+
+[node name="WorldWall2" type="StaticBody2D" parent="." unique_id=2041038375]
+position = Vector2(0, 1016)
+scale = Vector2(102.4, 0.819)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldWall2" unique_id=510072364]
+shape = SubResource("RectangleShape2D_npkn0")
+metadata/_edit_lock_ = true
+
+[node name="WorldWall3" type="StaticBody2D" parent="." unique_id=786546558]
+position = Vector2(1016, 0)
+rotation = 1.5707964
+scale = Vector2(102.4, 0.819)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldWall3" unique_id=340377680]
+shape = SubResource("RectangleShape2D_npkn0")
+metadata/_edit_lock_ = true
+
+[node name="WorldWall4" type="StaticBody2D" parent="." unique_id=1661308199]
+position = Vector2(-1016, 0)
+rotation = 1.5707964
+scale = Vector2(102.4, 0.819)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldWall4" unique_id=548396507]
+shape = SubResource("RectangleShape2D_npkn0")
+metadata/_edit_lock_ = true
 
 [connection signal="timeout" from="Enemy spawner/SpawnTimer" to="Enemy spawner" method="_on_spawn_timer_timeout"]
