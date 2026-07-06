@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cc3hrq6ovf61t" path="res://scripts/main_menu.gd" id="1_06t4h"]
 [ext_resource type="Theme" uid="uid://dmum6lfqbfasj" path="res://assets/Themes/menu_button.tres" id="2_jix8l"]
+[ext_resource type="PackedScene" uid="uid://dd2gp3gleromi" path="res://options_menu.tscn" id="3_fu7sn"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_pqjnt"]
 
@@ -70,6 +71,15 @@ size_flags_vertical = 4
 theme = ExtResource("2_jix8l")
 text = "START"
 
+[node name="OptionsButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=954113827]
+custom_minimum_size = Vector2(80, 40)
+custom_maximum_size = Vector2(150, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("2_jix8l")
+text = "OPTIONS"
+
 [node name="QuitButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1470926924]
 custom_minimum_size = Vector2(80, 40)
 custom_maximum_size = Vector2(150, 60)
@@ -90,5 +100,10 @@ size_flags_vertical = 4
 theme = ExtResource("2_jix8l")
 text = "CREDITS"
 
+[node name="Options" parent="." unique_id=1899668772 instance=ExtResource("3_fu7sn")]
+visible = false
+layout_mode = 1
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
