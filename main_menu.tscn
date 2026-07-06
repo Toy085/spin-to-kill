@@ -60,7 +60,6 @@ size_flags_vertical = 0
 text = "Spin To KILL"
 label_settings = SubResource("LabelSettings_gs0tk")
 horizontal_alignment = 1
-vertical_alignment = 3
 
 [node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=331559756]
 custom_minimum_size = Vector2(80, 40)
