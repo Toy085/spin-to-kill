@@ -4,6 +4,46 @@
 [ext_resource type="FontFile" uid="uid://c26t3s88bmep2" path="res://assets/fonts/Ubuntu-B.ttf" id="1_mx4k3"]
 [ext_resource type="StyleBox" uid="uid://igibjaj4f8se" path="res://assets/style_box_texture/gray_button.tres" id="2_mx4k3"]
 [ext_resource type="StyleBox" uid="uid://cshwlrpfl6awj" path="res://assets/style_box_texture/basic_red_button_pressed.tres" id="2_wnmk3"]
+[ext_resource type="Texture2D" uid="uid://bckiweppsv4ux" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tilemap/tilemap_packed.png" id="5_hncaa"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rcdwv"]
+atlas = ExtResource("5_hncaa")
+region = Rect2(98, 65, 12, 14)
+margin = Rect2(0, 6, 0, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tvnxi"]
+atlas = ExtResource("5_hncaa")
+region = Rect2(80, 65, 15, 14)
+margin = Rect2(0, 6, 0, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ge057"]
+atlas = ExtResource("5_hncaa")
+region = Rect2(278, 149, 4, 6)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hncaa"]
+texture = SubResource("AtlasTexture_ge057")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+expand_margin_top = 1.0
+expand_margin_bottom = 1.0
+region_rect = Rect2(0, 0, 4, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ogda5"]
+atlas = ExtResource("5_hncaa")
+region = Rect2(275, 98, 10, 12)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4gmlt"]
+texture = SubResource("AtlasTexture_ogda5")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+expand_margin_left = 2.0
+expand_margin_top = 4.0
+expand_margin_right = 2.0
+expand_margin_bottom = 4.0
 
 [resource]
 Button/font_sizes/font_size = 18
@@ -12,3 +52,12 @@ Button/styles/focus = ExtResource("1_fckqt")
 Button/styles/hover = ExtResource("1_fckqt")
 Button/styles/normal = ExtResource("2_mx4k3")
 Button/styles/pressed = ExtResource("2_wnmk3")
+HSlider/constants/center_grabber = 0
+HSlider/constants/grabber_offset = 0
+HSlider/constants/tick_offset = 0
+HSlider/icons/grabber = SubResource("AtlasTexture_rcdwv")
+HSlider/icons/grabber_disabled = SubResource("AtlasTexture_rcdwv")
+HSlider/icons/grabber_highlight = SubResource("AtlasTexture_tvnxi")
+HSlider/styles/grabber_area = SubResource("StyleBoxTexture_hncaa")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxTexture_hncaa")
+HSlider/styles/slider = SubResource("StyleBoxTexture_4gmlt")
