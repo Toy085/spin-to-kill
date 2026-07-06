@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dwlot7akyrayp" path="res://scripts/options_menu.gd" id="1_lbr8e"]
 [ext_resource type="Theme" uid="uid://dmum6lfqbfasj" path="res://assets/Themes/menu_button.tres" id="2_t1lix"]
+[ext_resource type="Script" uid="uid://cvk63nm3fwnu0" path="res://scripts/audio_control.gd" id="3_4gmlt"]
 
 [sub_resource type="FontVariation" id="FontVariation_lbr8e"]
 spacing_glyph = 3
@@ -46,12 +47,70 @@ offset_right = 250.0
 offset_bottom = -60.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 12
 
-[node name="HSlider" type="HSlider" parent="VBoxContainer" unique_id=192352771]
+[node name="MasterSliderLabel" type="Label" parent="VBoxContainer" unique_id=1430953078]
 layout_mode = 2
+text = "Master:"
+
+[node name="AudioControl" type="HSlider" parent="VBoxContainer/MasterSliderLabel" unique_id=192352771]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 16.00002
+grow_horizontal = 2
+grow_vertical = 0
 theme = ExtResource("2_t1lix")
+max_value = 1.0
 step = 0.0
-value = 52.325
+value = 1.0
+script = ExtResource("3_4gmlt")
+audio_bus_name = "Master"
+
+[node name="MusicSliderLabel" type="Label" parent="VBoxContainer" unique_id=233345757]
+layout_mode = 2
+text = "Music:"
+
+[node name="AudioControl" type="HSlider" parent="VBoxContainer/MusicSliderLabel" unique_id=2023721862]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 16.00002
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_t1lix")
+max_value = 1.0
+step = 0.0
+value = 1.0
+script = ExtResource("3_4gmlt")
+audio_bus_name = "Music"
+
+[node name="SFXSliderLabel" type="Label" parent="VBoxContainer" unique_id=440729684]
+layout_mode = 2
+text = "SFX:"
+
+[node name="AudioControl" type="HSlider" parent="VBoxContainer/SFXSliderLabel" unique_id=1640723380]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 16.00002
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_t1lix")
+max_value = 1.0
+step = 0.0
+value = 1.0
+script = ExtResource("3_4gmlt")
+audio_bus_name = "SFX"
 
 [node name="BackButton" type="Button" parent="." unique_id=113848584]
 custom_minimum_size = Vector2(80, 40)
@@ -74,4 +133,7 @@ offset_transform_position = Vector2(0, 35)
 theme = ExtResource("2_t1lix")
 text = "BACK"
 
+[connection signal="value_changed" from="VBoxContainer/MasterSliderLabel/AudioControl" to="VBoxContainer/MasterSliderLabel/AudioControl" method="_on_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/MusicSliderLabel/AudioControl" to="VBoxContainer/MusicSliderLabel/AudioControl" method="_on_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/SFXSliderLabel/AudioControl" to="VBoxContainer/SFXSliderLabel/AudioControl" method="_on_value_changed"]
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
