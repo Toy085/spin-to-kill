@@ -6,18 +6,20 @@
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_pqjnt"]
 
+[sub_resource type="FontVariation" id="FontVariation_fu7sn"]
+spacing_glyph = -1
+
 [sub_resource type="LabelSettings" id="LabelSettings_gs0tk"]
-font_size = 100
+font = SubResource("FontVariation_fu7sn")
+font_size = 96
 font_color = Color(0, 0, 0, 1)
-outline_size = 50
+outline_size = 12
 outline_color = Color(1, 0.33999997, 0.33999997, 1)
-shadow_size = 70
+shadow_size = 10
 shadow_color = Color(0, 0, 0, 0.39215687)
-stacked_outline_count = 1
 stacked_shadow_count = 1
-stacked_outline_0/size = 20
 stacked_shadow_0/color = Color(0, 0, 0, 0.4745098)
-stacked_shadow_0/outline_size = 75
+stacked_shadow_0/outline_size = 18
 
 [node name="MainMenu" type="Control" unique_id=371977734]
 layout_mode = 3
