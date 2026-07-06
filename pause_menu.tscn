@@ -2,6 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://dmum6lfqbfasj" path="res://assets/Themes/menu_button.tres" id="1_hdmo1"]
 [ext_resource type="Script" uid="uid://cj3vklc3jj8i0" path="res://scripts/pause_menu.gd" id="1_nwcfo"]
+[ext_resource type="PackedScene" uid="uid://dd2gp3gleromi" path="res://options_menu.tscn" id="3_05uyy"]
 
 [node name="PauseMenu" type="Control" unique_id=1166785966]
 process_mode = 3
@@ -52,7 +53,6 @@ theme = ExtResource("1_hdmo1")
 text = "RESUME"
 
 [node name="OptionsButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1406917053]
-visible = false
 custom_minimum_size = Vector2(80, 40)
 custom_maximum_size = Vector2(150, 60)
 layout_mode = 2
@@ -81,5 +81,10 @@ size_flags_vertical = 4
 theme = ExtResource("1_hdmo1")
 text = "CREDITS"
 
+[node name="Options" parent="." unique_id=1899668772 instance=ExtResource("3_05uyy")]
+visible = false
+layout_mode = 1
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
