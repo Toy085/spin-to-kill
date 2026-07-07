@@ -50,7 +50,15 @@ func _physics_process(delta:float) -> void:
 			is_spinning = false
 			axe_pivot.hide()
 			cooldown_timer.start()
-			
+	
+	if Input.is_action_just_pressed("throw_axe") and cooldown_timer.is_stopped():
+		throw_axe()
+
+func throw_axe() -> void:
+	var mouse_pos = get_global_mouse_position()
+	var throw_dir = (mouse_pos - global_position).normalized()
+	pass
+
 func damage(damage: int) -> void:
 	Global.health -= damage
 	
