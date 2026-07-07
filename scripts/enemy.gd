@@ -4,11 +4,11 @@ extends CharacterBody2D
 @export var attack_damage: int = 1
 
 @onready var coin: PackedScene = preload("res://coin.tscn")
-@onready var attact_cooldown: Timer = $AttactCooldown
+@onready var attack_cooldown: Timer = $AttackCooldown
 
 var player_in_range: CharacterBody2D = null
 
-var player
+var player: CharacterBody2D
 var health = randi_range(5, 20)
 
 func _ready() -> void:
@@ -45,7 +45,7 @@ func _on_attact_area_body_entered(body: Node2D) -> void:
 func _on_attact_area_body_exited(body: Node2D) -> void:
 	if body == player_in_range:
 		player_in_range = null
-		attact_cooldown.stop()
+		attack_cooldown.stop()
 
 func _on_attact_cooldown_timeout() -> void:
 	attack_player()
@@ -53,4 +53,4 @@ func _on_attact_cooldown_timeout() -> void:
 func attack_player() -> void:
 	if player_in_range and health > 0:
 		player_in_range.damage(attack_damage)
-		attact_cooldown.start()
+		attack_cooldown.start()

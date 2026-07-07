@@ -36,15 +36,15 @@ sprite_frames = SubResource("SpriteFrames_oaf1g")
 autoplay = "default"
 frame_progress = 0.47773534
 
-[node name="AttactArea" type="Area2D" parent="." unique_id=1528390596]
+[node name="AttackArea" type="Area2D" parent="." unique_id=1528390596]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AttactArea" unique_id=2119881822]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" unique_id=2119881822]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_oaf1g")
 
-[node name="AttactCooldown" type="Timer" parent="." unique_id=684558751]
+[node name="AttackCooldown" type="Timer" parent="." unique_id=684558751]
 autostart = true
 
-[connection signal="body_entered" from="AttactArea" to="." method="_on_attact_area_body_entered"]
-[connection signal="body_exited" from="AttactArea" to="." method="_on_attact_area_body_exited"]
-[connection signal="timeout" from="AttactCooldown" to="." method="_on_attact_cooldown_timeout"]
+[connection signal="body_entered" from="AttackArea" to="." method="_on_attact_area_body_entered"]
+[connection signal="body_exited" from="AttackArea" to="." method="_on_attact_area_body_exited"]
+[connection signal="timeout" from="AttackCooldown" to="." method="_on_attact_cooldown_timeout"]
