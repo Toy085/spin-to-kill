@@ -1,4 +1,6 @@
+@icon ("res://addons/at-icons/node2d/ghost.svg")
 extends CharacterBody2D
+class_name Enemy
 
 @export var speed : float = 50
 @export var attack_damage: int = 1
