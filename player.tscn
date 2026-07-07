@@ -56,5 +56,5 @@ one_shot = true
 
 [node name="Footstep" type="AudioStreamPlayer2D" parent="." unique_id=568845569]
 stream = ExtResource("4_hqtel")
-volume_db = 12.345
+volume_db = 13.0
 bus = &"SFX"
