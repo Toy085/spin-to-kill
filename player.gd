@@ -4,8 +4,9 @@ extends CharacterBody2D
 @onready var cooldown_timer = $Timer
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 @onready var footstep_player: AudioStreamPlayer2D = $Footstep
+@onready var axe_scene: PackedScene = preload("res://axe.tscn")
 
-@export var speed : float = Global.speed
+@export var speed: float = Global.speed
 @export var spin_speed: float = 12
 
 var is_spinning: bool = false
@@ -61,9 +62,21 @@ func _physics_process(delta:float) -> void:
 		throw_axe()
 
 func throw_axe() -> void:
+	if not axe_scene:
+		return
+	
 	var mouse_pos = get_global_mouse_position()
-	var throw_dir = (mouse_pos - global_position).normalized()
-	pass
+	
+	var axe_instance = axe_scene.instantiate() as Axe
+	
+	axe_instance.Thrown = true
+	axe_instance.mouse_pos = mouse_pos
+	axe_instance.global_position = global_position
+	
+	get_parent().add_child(axe_instance)
+	
+	cooldown_timer.start()
+
 
 func damage(damage: int) -> void:
 	Global.health -= damage
