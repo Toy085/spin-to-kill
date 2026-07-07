@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cxsri8aha16tj" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Players/Tilemap/tilemap.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://vhoympuivnho" path="res://player.gd" id="1_onrkg"]
 [ext_resource type="PackedScene" uid="uid://5vq00ew7phmv" path="res://axe.tscn" id="2_i3pqv"]
+[ext_resource type="AudioStream" uid="uid://0ywek1guxmri" path="res://footstep.wav" id="4_hqtel"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_onrkg"]
 atlas = ExtResource("1_4flbx")
@@ -52,3 +53,8 @@ position = Vector2(0, -18)
 
 [node name="Timer" type="Timer" parent="." unique_id=1261437021]
 one_shot = true
+
+[node name="Footstep" type="AudioStreamPlayer2D" parent="." unique_id=568845569]
+stream = ExtResource("4_hqtel")
+volume_db = 12.345
+bus = &"SFX"

@@ -3,6 +3,7 @@ extends CharacterBody2D
 @onready var axe_pivot: Node2D = $AxePivot
 @onready var cooldown_timer = $Timer
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
+@onready var footstep_player: AudioStreamPlayer2D = $Footstep
 
 @export var speed : float = Global.speed
 @export var spin_speed: float = 12
@@ -23,8 +24,13 @@ func _physics_process(delta:float) -> void:
 	velocity = input_vector * speed
 	if anim and velocity != Vector2.ZERO:
 		anim.play()
+		if !footstep_player.playing:
+			footstep_player.pitch_scale = randf_range(.8, 1.2)
+			footstep_player.play()
+			
 	else:
 		anim.pause()
+	
 	move_and_slide()
 
 	if Input.is_action_just_pressed("spin_cw") and not is_spinning and cooldown_timer.is_stopped():
