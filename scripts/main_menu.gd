@@ -1,3 +1,4 @@
+@icon("res://addons/at-icons/control/dropdown.svg")
 extends Control
 
 @export var game_scene_path : String = "res://world.tscn"

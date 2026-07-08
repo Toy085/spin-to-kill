@@ -1,3 +1,4 @@
+@icon("res://addons/at-icons/control/playing_card.svg")
 extends PanelContainer
 
 signal bought

@@ -21,7 +21,7 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3m5gk"]
 
-[node name="Node2D" type="Control" unique_id=329543784 node_paths=PackedStringArray("slots", "shopslot")]
+[node name="ShopMenu" type="Control" unique_id=329543784 node_paths=PackedStringArray("slots", "shopslot")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

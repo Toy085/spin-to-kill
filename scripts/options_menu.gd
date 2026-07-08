@@ -1,3 +1,4 @@
+@icon("res://addons/at-icons/control/dropdown.svg")
 extends Panel
 
 @onready var options: Panel = $"."

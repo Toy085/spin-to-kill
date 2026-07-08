@@ -1,3 +1,4 @@
+@icon("res://addons/at-icons/node2d/coin.svg")
 extends Area2D
 
 @export var magnet_speed := 300.0

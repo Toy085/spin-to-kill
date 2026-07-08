@@ -1,3 +1,4 @@
+@icon("res://addons/at-icons/control/shopping_cart.svg")
 extends Control
 
 @export var item_pool: Array[ShopItem]

@@ -1,3 +1,4 @@
+@icon("res://addons/at-icons/control/pause.svg")
 extends Control
 
 @onready var options: Panel = $Options
