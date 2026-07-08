@@ -8,6 +8,9 @@ func _on_spawn_timer_timeout() -> void:
 	if not enemy_scene:
 		return
 	
+	if not Global.crash_scene:
+		return
+	
 	var new_enemy = enemy_scene.instantiate()
 	
 	var random_x = randf_range(-1000, 1000)
