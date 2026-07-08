@@ -7,7 +7,7 @@ class_name Axe
 @export var spin_speed: float = 32
 
 var dir
-var mouse_pos: Vector2
+var pos: Vector2
 var returning: bool = false
 var player: CharacterBody2D
 
@@ -15,13 +15,13 @@ func _ready() -> void:
 	player = get_tree().get_first_node_in_group("player")
 	
 	if Thrown:
-		dir = (mouse_pos - global_position).normalized()
+		dir = (pos - global_position).normalized()
 
 func _process(delta: float) -> void:
 	if not Thrown:
 		return
 		
-	if not returning and global_position.distance_to(mouse_pos) < 10:
+	if not returning and global_position.distance_to(pos) < 10:
 		returning = true
 	
 	if returning and player:

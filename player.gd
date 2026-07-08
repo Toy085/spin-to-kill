@@ -66,11 +66,12 @@ func throw_axe() -> void:
 		return
 	
 	var mouse_pos = get_global_mouse_position()
+	var dir = (mouse_pos - global_position).normalized()
 	
 	var axe_instance = axe_scene.instantiate() as Axe
 	
 	axe_instance.Thrown = true
-	axe_instance.mouse_pos = mouse_pos
+	axe_instance.pos = global_position + (dir * 100)
 	axe_instance.global_position = global_position
 	
 	get_parent().add_child(axe_instance)
