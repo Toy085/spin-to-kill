@@ -1,0 +1,11 @@
+~ start
+Nathan: [[Hi|Hey]], so, uhh.
+~ crash
+Nathan: Your spaceship crashed and we dont have eough resouces.
+- What?
+	Nathan: Yeah.
+- Huh? => crash
+Nathan: Anyways...
+Nathan: We have put an emergancy axe inside the spaceship.
+Nathan: Use it when you need to!
+=> END
