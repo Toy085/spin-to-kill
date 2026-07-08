@@ -8,7 +8,8 @@ enum ItemType {
 	DAMAGE, ## Deal more damage
 	MAGNET_RADIUS, ## Increase magnet radius for picking up coins
 	COOLDOWN_REDUCTION, ## For the spin attack
-	GREED ## More coins dropped during runs
+	GREED, ## More coins dropped during runs
+	AXE_RANGE ## Increase axe range 
 }
 
 @export_group("Visuals & Info")
@@ -18,7 +19,7 @@ enum ItemType {
 
 @export_group("Mechanics")
 @export var type: ItemType = ItemType.HEALTH
-@export var stat_modifier: float = 0.1 ## e.g., 0.1 means +10% speed or damage
+@export var stat_modifier: float = 0.1 
 
 @export_group("Shop Progression") 
 @export var base_price: int = 100
