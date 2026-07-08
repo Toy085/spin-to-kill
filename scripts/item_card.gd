@@ -9,6 +9,7 @@ signal bought
 
 var current_item: ShopItem = null
 var current_price: int = 0
+var bought_item: bool = false
 
 func setup_card(item: ShopItem) -> void:
 	if not item:
@@ -29,6 +30,9 @@ func setup_card(item: ShopItem) -> void:
 	
 	if saved_level >= item.max_level:
 		buy_button.text = "MAXED"
+		buy_button.disabled = true
+	elif bought_item:
+		buy_button.text = "BOUGHT"
 		buy_button.disabled = true
 	else:
 		buy_button.text = str(current_price) + "g"
@@ -70,6 +74,7 @@ func _on_buy_button_pressed() -> void:
 			Global.greed += int(current_item.stat_modifier)
 			
 	bought.emit()
+	bought_item = true
 	
 	# Update or disable card after purchase
 	setup_card(current_item)

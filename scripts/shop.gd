@@ -100,7 +100,10 @@ func display_reward_cards() -> void:
 	card_container.show()
 
 func _on_card_purchased() -> void:
-	get_tree().change_scene_to_file("res://world.tscn")
+	#get_tree().change_scene_to_file("res://world.tscn")
+	if coinlabel:
+		coinlabel.text = "[color=black]COINS: [outline_size=6][color=gold]" + str(Global.total_money) + "[/color][/outline_size]"
+
 
 func _on_exit_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://world.tscn")

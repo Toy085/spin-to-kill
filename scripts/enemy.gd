@@ -55,4 +55,5 @@ func _on_attact_cooldown_timeout() -> void:
 func attack_player() -> void:
 	if player_in_range and health > 0:
 		player_in_range.damage(attack_damage)
-		attack_cooldown.start()
+		if attack_cooldown:
+			attack_cooldown.start()

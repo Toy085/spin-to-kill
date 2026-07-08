@@ -22,4 +22,4 @@ func player_died():
 	total_money += current_run_money
 	current_run_money = 0
 	
-	get_tree().change_scene_to_file("res://ShopMenu.tscn")
+	get_tree().call_deferred("change_scene_to_file", "res://ShopMenu.tscn")
