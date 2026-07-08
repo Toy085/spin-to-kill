@@ -27,6 +27,7 @@ func _process(delta: float) -> void:
 		var direction = (player.global_position - global_position).normalized()
 		velocity = direction * speed + knockback_velocity
 		move_and_slide()
+		
 		knockback_velocity = knockback_velocity.move_toward(Vector2.ZERO, 500 * delta)
 
 func damage(damage: int, dir: Vector2) -> void:
