@@ -72,6 +72,8 @@ func _on_buy_button_pressed() -> void:
 			Global.cooldown -= current_item.stat_modifier
 		ShopItem.ItemType.GREED:
 			Global.greed += int(current_item.stat_modifier)
+		ShopItem.ItemType.AXE_RANGE:
+			Global.axe_range += current_item.stat_modifier
 			
 	bought.emit()
 	bought_item = true

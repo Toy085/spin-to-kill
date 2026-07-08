@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ShopItem" format=3 uid="uid://cbogov6pypnu4"]
+
+[ext_resource type="Script" uid="uid://c8mxrawv7fowy" path="res://scripts/ShopItem.gd" id="1_10mya"]
+
+[resource]
+script = ExtResource("1_10mya")
+item_name = "Axe Range"
+description = "Increase the range of thrown axe. Attack enemies further away."
+type = 6
+stat_modifier = 25.0
+base_price = 90
+metadata/_custom_type_script = "uid://c8mxrawv7fowy"

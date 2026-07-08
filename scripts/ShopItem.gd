@@ -1,4 +1,5 @@
 ## This is used for creating new shop items
+@icon ("res://addons/at-icons/node/shopping_bag.svg")
 class_name ShopItem
 extends Resource
 

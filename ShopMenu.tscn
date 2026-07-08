@@ -9,6 +9,7 @@
 [ext_resource type="Resource" uid="uid://826esu6bhvvg" path="res://assets/shopItems/health.tres" id="6_108c6"]
 [ext_resource type="Resource" uid="uid://doqg333bk1bto" path="res://assets/shopItems/MAGNET_RADIUS.tres" id="7_534mg"]
 [ext_resource type="Resource" uid="uid://co8lpd0ckcnde" path="res://assets/shopItems/COOLDOWN_REDUCTION.tres" id="8_vjohh"]
+[ext_resource type="Resource" uid="uid://cbogov6pypnu4" path="res://assets/shopItems/AXE_RANGE.tres" id="9_aibjm"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yogbl"]
 
@@ -28,7 +29,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_bqhtw")
-item_pool = Array[ExtResource("2_durvn")]([ExtResource("8_vjohh"), ExtResource("7_534mg"), ExtResource("6_108c6"), ExtResource("5_jc8js"), ExtResource("4_jf33j"), ExtResource("3_31hie")])
+item_pool = Array[ExtResource("2_durvn")]([ExtResource("8_vjohh"), ExtResource("7_534mg"), ExtResource("6_108c6"), ExtResource("5_jc8js"), ExtResource("4_jf33j"), ExtResource("3_31hie"), ExtResource("9_aibjm")])
 slots = [NodePath("TextureRect/Slot1"), NodePath("TextureRect/Slot2"), NodePath("TextureRect/Slot3")]
 shopslot = NodePath("TextureRect")
 
