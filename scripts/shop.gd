@@ -103,6 +103,10 @@ func _on_card_purchased() -> void:
 	#get_tree().change_scene_to_file("res://world.tscn")
 	if coinlabel:
 		coinlabel.text = "[color=black]COINS: [outline_size=6][color=gold]" + str(Global.total_money) + "[/color][/outline_size]"
+	
+	for card in card_container.get_children():
+		if card.has_method("setup_card") and card.current_item != null:
+			card.setup_card(card.current_item)
 
 
 func _on_exit_button_pressed() -> void:

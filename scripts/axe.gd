@@ -26,6 +26,7 @@ func _process(delta: float) -> void:
 	
 	if returning and player:
 		dir = (player.global_position - global_position).normalized()
+		speed += 50 * delta
 		
 		if global_position.distance_to(player.global_position) < 10:
 			queue_free()
