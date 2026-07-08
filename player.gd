@@ -71,7 +71,7 @@ func throw_axe() -> void:
 	var axe_instance = axe_scene.instantiate() as Axe
 	
 	axe_instance.Thrown = true
-	axe_instance.pos = global_position + (dir * 100)
+	axe_instance.pos = global_position + (dir * Global.axe_range)
 	axe_instance.global_position = global_position
 	
 	get_parent().add_child(axe_instance)
