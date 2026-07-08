@@ -12,6 +12,8 @@ var greed: int = 0
 var coin_radius: float = 32
 var axe_range: float = 50
 
+var crash_scene: bool = false
+
 var item_levels: Dictionary = {}
 
 func get_item_level(item_name: String) -> int:
