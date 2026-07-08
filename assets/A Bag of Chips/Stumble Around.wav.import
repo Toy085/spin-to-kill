@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bwshtsand6x2u"
+path="res://.godot/imported/Stumble Around.wav-79e312b60674ba90624ca84e17025273.sample"
+
+[deps]
+
+source_file="res://assets/A Bag of Chips/Stumble Around.wav"
+dest_files=["res://.godot/imported/Stumble Around.wav-79e312b60674ba90624ca84e17025273.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

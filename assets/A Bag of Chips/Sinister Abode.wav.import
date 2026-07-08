@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bi3f4opmronf"
+path="res://.godot/imported/Sinister Abode.wav-5d518093b011287415ebda25be3d7e78.sample"
+
+[deps]
+
+source_file="res://assets/A Bag of Chips/Sinister Abode.wav"
+dest_files=["res://.godot/imported/Sinister Abode.wav-5d518093b011287415ebda25be3d7e78.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

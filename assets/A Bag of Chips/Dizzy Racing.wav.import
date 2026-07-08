@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d120jtjk8glnk"
+path="res://.godot/imported/Dizzy Racing.wav-44042d4d445ed614dafcaaa5f738ff95.sample"
+
+[deps]
+
+source_file="res://assets/A Bag of Chips/Dizzy Racing.wav"
+dest_files=["res://.godot/imported/Dizzy Racing.wav-44042d4d445ed614dafcaaa5f738ff95.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

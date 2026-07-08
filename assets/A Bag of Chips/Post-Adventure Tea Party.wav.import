@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://mno20dp6lnly"
+path="res://.godot/imported/Post-Adventure Tea Party.wav-e62bc14e80ec07436a8a9d7e0853ec00.sample"
+
+[deps]
+
+source_file="res://assets/A Bag of Chips/Post-Adventure Tea Party.wav"
+dest_files=["res://.godot/imported/Post-Adventure Tea Party.wav-e62bc14e80ec07436a8a9d7e0853ec00.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
