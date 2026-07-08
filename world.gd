@@ -1,3 +1,4 @@
+@icon("res://addons/at-icons/node2d/mountains.svg")
 extends Node2D
 
 @export var crash_dialogue: DialogueResource
