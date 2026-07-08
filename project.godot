@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 
 Global="*uid://bpkvyu7xypnxw"
 MusicManager="*uid://cupa4ebqa2rnu"
+DialogueManager="*uid://c3rodes2l3gxb"
 
 [display]
 
@@ -34,7 +35,7 @@ version_control/autoload_on_startup=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg", "res://addons/sprite_label/plugin.cfg")
+enabled=PackedStringArray("res://addons/at-icons/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg", "res://addons/godot_super-wakatime/plugin.cfg", "res://addons/sprite_label/plugin.cfg")
 
 [global_group]
 
