@@ -88,9 +88,9 @@ scale = Vector2(102.4, 0.819)
 shape = SubResource("RectangleShape2D_npkn0")
 metadata/_edit_lock_ = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1830320758]
+[node name="UI" type="CanvasLayer" parent="." unique_id=1830320758]
 
-[node name="HUD" type="Control" parent="CanvasLayer" unique_id=1660999193]
+[node name="HUD" type="Control" parent="UI" unique_id=1660999193]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -99,7 +99,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("6_dwbse")
 
-[node name="CoinLabel" type="RichTextLabel" parent="CanvasLayer/HUD" unique_id=1946330892]
+[node name="CoinLabel" type="RichTextLabel" parent="UI/HUD" unique_id=1946330892]
 layout_mode = 1
 offset_left = 2.0
 offset_top = 27.0
@@ -108,7 +108,7 @@ offset_bottom = 50.0
 bbcode_enabled = true
 text = "COINS: [outline_size=6][color=gold]6767[/color][/outline_size]"
 
-[node name="HealthBar" type="ProgressBar" parent="CanvasLayer/HUD" unique_id=690985730]
+[node name="HealthBar" type="ProgressBar" parent="UI/HUD" unique_id=690985730]
 layout_mode = 0
 offset_right = 227.0
 offset_bottom = 27.0
@@ -117,7 +117,17 @@ step = 1.0
 value = 50.0
 show_percentage = false
 
-[node name="PauseMenu" parent="CanvasLayer" unique_id=1166785966 instance=ExtResource("4_aqk2v")]
+[node name="PauseMenu" parent="UI" unique_id=1166785966 instance=ExtResource("4_aqk2v")]
 visible = false
+
+[node name="VirtualJoystick" type="VirtualJoystick" parent="UI" unique_id=1432245639]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 75.0
+offset_top = -110.0
+offset_right = 115.0
+offset_bottom = -70.0
+grow_vertical = 0
 
 [connection signal="timeout" from="Enemy spawner/SpawnTimer" to="Enemy spawner" method="_on_spawn_timer_timeout"]

@@ -12,9 +12,10 @@ func _ready() -> void:
 		
 	player.visible = false
 	player.set_physics_process(false)
-	DialogueManager.show_example_dialogue_balloon(crash_dialogue, "start")
 	
-	await DialogueManager.dialogue_ended
+	#DialogueManager.show_example_dialogue_balloon(crash_dialogue, "start")
+	#await DialogueManager.dialogue_ended
+	
 	Global.crash_scene = true
 	player.visible = true
 	player.set_physics_process(true)
