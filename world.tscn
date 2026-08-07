@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://bacygmvkp0iqp" path="res://scripts/enemy_spawner.gd" id="3_tlwt5"]
 [ext_resource type="PackedScene" uid="uid://duvphv4qv6q86" path="res://pause_menu.tscn" id="4_aqk2v"]
 [ext_resource type="Script" uid="uid://bgsh0ljk2b3gy" path="res://scripts/hud.gd" id="6_dwbse"]
+[ext_resource type="Script" uid="uid://bmt6qov51nh58" path="res://scripts/touch_controls.gd" id="8_ioo17"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_npkn0"]
 
@@ -134,6 +135,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("8_ioo17")
 
 [node name="VirtualJoystick" type="VirtualJoystick" parent="UI/TouchControls" unique_id=1432245639]
 layout_mode = 1
