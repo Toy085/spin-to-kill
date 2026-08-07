@@ -16,6 +16,16 @@ bg_color = Color(0.91915226, 0.37215286, 0.31346127, 1)
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 
+[sub_resource type="Gradient" id="Gradient_gbfbk"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wse8f"]
+gradient = SubResource("Gradient_gbfbk")
+
+[sub_resource type="Gradient" id="Gradient_ioo17"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_k3n1d"]
+gradient = SubResource("Gradient_ioo17")
+
 [node name="World" type="Node2D" unique_id=183599338]
 script = ExtResource("1_pkg7o")
 crash_dialogue = ExtResource("2_gbfbk")
@@ -117,10 +127,16 @@ step = 1.0
 value = 50.0
 show_percentage = false
 
-[node name="PauseMenu" parent="UI" unique_id=1166785966 instance=ExtResource("4_aqk2v")]
-visible = false
+[node name="TouchControls" type="Control" parent="UI" unique_id=1260451710]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="VirtualJoystick" type="VirtualJoystick" parent="UI" unique_id=1432245639]
+[node name="VirtualJoystick" type="VirtualJoystick" parent="UI/TouchControls" unique_id=1432245639]
+layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
@@ -129,5 +145,26 @@ offset_top = -110.0
 offset_right = 115.0
 offset_bottom = -70.0
 grow_vertical = 0
+
+[node name="Buttons" type="Control" parent="UI/TouchControls" unique_id=1736632840]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -170.0
+offset_top = -180.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="UI/TouchControls/Buttons" unique_id=122605825]
+position = Vector2(75, 0)
+texture_normal = SubResource("GradientTexture2D_wse8f")
+texture_pressed = SubResource("GradientTexture2D_k3n1d")
+action = "throw_axe"
+
+[node name="PauseMenu" parent="UI" unique_id=1166785966 instance=ExtResource("4_aqk2v")]
+visible = false
 
 [connection signal="timeout" from="Enemy spawner/SpawnTimer" to="Enemy spawner" method="_on_spawn_timer_timeout"]
