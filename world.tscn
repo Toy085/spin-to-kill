@@ -164,7 +164,7 @@ grow_vertical = 0
 position = Vector2(75, 0)
 texture_normal = SubResource("GradientTexture2D_wse8f")
 texture_pressed = SubResource("GradientTexture2D_k3n1d")
-action = "throw_axe"
+action = "spin_cw"
 
 [node name="PauseMenu" parent="UI" unique_id=1166785966 instance=ExtResource("4_aqk2v")]
 visible = false

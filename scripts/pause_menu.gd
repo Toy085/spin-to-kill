@@ -2,6 +2,7 @@
 extends Control
 
 @onready var options: Panel = $Options
+@onready var resume_button: Button = $MarginContainer/VBoxContainer/ResumeButton
 
 func _ready() -> void:
 	hide()
@@ -15,6 +16,7 @@ func toggle_pause():
 
 	if get_tree().paused:
 		show()
+		resume_button.grab_focus()
 	else:
 		hide()
 
