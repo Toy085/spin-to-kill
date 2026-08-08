@@ -137,7 +137,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("8_ioo17")
 
-[node name="VirtualJoystick" type="VirtualJoystick" parent="UI/TouchControls" unique_id=1432245639]
+[node name="MoveJoystick" type="VirtualJoystick" parent="UI/TouchControls" unique_id=1432245639]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -148,20 +148,26 @@ offset_right = 115.0
 offset_bottom = -70.0
 grow_vertical = 0
 
-[node name="Buttons" type="Control" parent="UI/TouchControls" unique_id=1736632840]
+[node name="AimJoystick" type="VirtualJoystick" parent="UI/TouchControls" unique_id=2120644399]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -170.0
-offset_top = -180.0
+offset_left = -90.0
+offset_top = -110.0
+offset_right = -50.0
+offset_bottom = -70.0
 grow_horizontal = 0
 grow_vertical = 0
+action_left = &"aim_left"
+action_right = &"aim_right"
+action_up = &"aim_up"
+action_down = &"aim_down"
 
-[node name="TouchScreenButton" type="TouchScreenButton" parent="UI/TouchControls/Buttons" unique_id=122605825]
-position = Vector2(75, 0)
+[node name="TouchScreenButton" type="TouchScreenButton" parent="UI/TouchControls" unique_id=122605825]
+position = Vector2(570, 130)
 texture_normal = SubResource("GradientTexture2D_wse8f")
 texture_pressed = SubResource("GradientTexture2D_k3n1d")
 action = "spin_cw"
