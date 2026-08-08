@@ -1,11 +1,13 @@
 [gd_resource type="Resource" script_class="ShopItem" format=3 uid="uid://cbogov6pypnu4"]
 
 [ext_resource type="Script" uid="uid://c8mxrawv7fowy" path="res://scripts/ShopItem.gd" id="1_10mya"]
+[ext_resource type="Texture2D" uid="uid://bn32j31lrnm5v" path="res://assets/images/RangeIcon.png" id="1_ep8qc"]
 
 [resource]
 script = ExtResource("1_10mya")
 item_name = "Axe Range"
 description = "Increase the range of thrown axe. Attack enemies further away."
+icon = ExtResource("1_ep8qc")
 type = 6
 stat_modifier = 25.0
 base_price = 90
