@@ -5,12 +5,17 @@ extends CharacterBody2D
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 @onready var footstep_player: AudioStreamPlayer2D = $Footstep
 @onready var axe_scene: PackedScene = preload("res://axe.tscn")
+@onready var crosshair: Sprite2D = $Crosshair
 
 @export var speed: float = Global.speed
 @export var spin_speed: float = 12
 
 var is_spinning: bool = false
 var spin_cw: bool = true
+
+var joystick_dir: Vector2
+var last_aim_dir: Vector2
+var is_aiming_joystick: bool = false
 
 func _ready() -> void:
 	cooldown_timer.wait_time = Global.cooldown
@@ -22,6 +27,7 @@ func _ready() -> void:
 
 func _physics_process(delta:float) -> void:
 	var input_vector = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	joystick_dir = Input.get_vector("aim_left", "aim_right", "aim_up", "aim_down")
 	velocity = input_vector * speed
 	if anim and velocity != Vector2.ZERO:
 		anim.play()
@@ -60,15 +66,36 @@ func _physics_process(delta:float) -> void:
 	
 	if Input.is_action_just_pressed("throw_axe") and cooldown_timer.is_stopped():
 		throw_axe()
-
-func throw_axe() -> void:
+		
+	if joystick_dir.length() >= 0.2:
+		crosshair.global_position = global_position + (joystick_dir.normalized() * 20)
+		last_aim_dir = joystick_dir.normalized()
+		is_aiming_joystick = true
+		crosshair.show()
+	else:
+		if is_aiming_joystick:
+			is_aiming_joystick = false
+			crosshair.hide()
+			
+			if cooldown_timer.is_stopped():
+				throw_axe(last_aim_dir)
+				
+		else:
+			crosshair.hide()
+		
+func throw_axe(forced_dir: Vector2 = Vector2.ZERO) -> void:
 	if not axe_scene:
 		return
 	
 	var mouse_pos = get_global_mouse_position()
-	var dir = (mouse_pos - global_position).normalized()
+	var dir = forced_dir
 	
 	var axe_instance = axe_scene.instantiate() as Axe
+	if dir == Vector2.ZERO:
+		if joystick_dir.length() >= 0.2:
+			dir = joystick_dir.normalized()
+		else:
+			dir = (mouse_pos - global_position).normalized()
 	
 	axe_instance.Thrown = true
 	axe_instance.pos = global_position + (dir * Global.axe_range)
