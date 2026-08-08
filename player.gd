@@ -108,6 +108,9 @@ func throw_axe(forced_dir: Vector2 = Vector2.ZERO) -> void:
 
 func damage(damage: int) -> void:
 	Global.health -= damage
+	Input.start_joy_vibration(0, 0.25, 0.5, 0.1)
 	
 	if Global.health <= 0:
 		Global.player_died()
+		Input.start_joy_vibration(0, 1.0, 1.0, 0.5)
+		Input.vibrate_handheld()
