@@ -7,7 +7,7 @@ extends Panel
 func _on_back_button_pressed() -> void:
 	options.visible = false
 
-func _ready() -> void:
+func open_options():
 	audio_control.grab_focus()
 
 func _on_fullscreen_toggle_toggled(toggled_on: bool) -> void:
