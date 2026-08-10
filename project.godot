@@ -14,7 +14,7 @@ config/name="spin to kill"
 run/main_scene="uid://wpvrjvkvmkkm"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 boot_splash/show_image=false
-config/icon="res://icon.svg"
+config/icon="uid://c1oqo0quep1sb"
 
 [autoload]
 
