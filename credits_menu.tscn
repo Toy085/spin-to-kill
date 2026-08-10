@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://u5a3wtm65jil"]
+
+[ext_resource type="Theme" uid="uid://dmum6lfqbfasj" path="res://assets/Themes/menu_button.tres" id="2_flccv"]
+
+[sub_resource type="FontVariation" id="FontVariation_lbr8e"]
+spacing_glyph = 3
+
+[sub_resource type="LabelSettings" id="LabelSettings_7agid"]
+font = SubResource("FontVariation_lbr8e")
+font_size = 64
+outline_size = 18
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 20
+shadow_color = Color(0, 0, 0, 0.19607843)
+
+[node name="Credits" type="Panel" unique_id=1899668772]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="." unique_id=815195739]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Credits"
+label_settings = SubResource("LabelSettings_7agid")
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1919244164]
+custom_minimum_size = Vector2(350, 210)
+custom_maximum_size = Vector2(400, 220)
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = 90.0
+offset_right = 250.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 14
+
+[node name="BackButton" type="Button" parent="." unique_id=113848584]
+custom_minimum_size = Vector2(80, 40)
+custom_maximum_size = Vector2(150, 60)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -50.0
+offset_right = 40.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+offset_transform_position = Vector2(0, 35)
+theme = ExtResource("2_flccv")
+text = "BACK"
