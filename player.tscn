@@ -61,5 +61,6 @@ volume_db = 13.0
 bus = &"SFX"
 
 [node name="Crosshair" type="Sprite2D" parent="." unique_id=1867054907]
+visible = false
 scale = Vector2(2, 2)
 texture = ExtResource("5_sweqy")
