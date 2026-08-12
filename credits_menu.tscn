@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://lwmc1x5h6s3v"]
 
+[ext_resource type="Script" uid="uid://bdd3hlawxfyjy" path="res://scripts/credits_menu.gd" id="1_tgbea"]
 [ext_resource type="Theme" uid="uid://dmum6lfqbfasj" path="res://assets/Themes/menu_button.tres" id="2_flccv"]
 
 [sub_resource type="FontVariation" id="FontVariation_lbr8e"]
@@ -19,6 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_tgbea")
 
 [node name="Label" type="Label" parent="." unique_id=815195739]
 layout_mode = 1
@@ -78,3 +80,5 @@ size_flags_vertical = 4
 offset_transform_position = Vector2(0, 35)
 theme = ExtResource("2_flccv")
 text = "BACK"
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
