@@ -78,6 +78,12 @@ grow_vertical = 0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 offset_transform_position = Vector2(0, 35)
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath(".")
+focus_next = NodePath(".")
+focus_previous = NodePath(".")
 theme = ExtResource("2_flccv")
 text = "BACK"
 

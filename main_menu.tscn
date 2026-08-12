@@ -71,6 +71,7 @@ custom_maximum_size = Vector2(150, 60)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_neighbor_top = NodePath("../CreditsButton")
 focus_neighbor_bottom = NodePath("../OptionsButton")
 theme = ExtResource("2_jix8l")
 text = "START"
@@ -105,6 +106,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 focus_neighbor_top = NodePath("../QuitButton")
+focus_neighbor_bottom = NodePath("../StartButton")
 theme = ExtResource("2_jix8l")
 text = "CREDITS"
 
