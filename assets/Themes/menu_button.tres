@@ -5,6 +5,8 @@
 [ext_resource type="StyleBox" uid="uid://igibjaj4f8se" path="res://assets/style_box_texture/gray_button.tres" id="2_mx4k3"]
 [ext_resource type="StyleBox" uid="uid://cshwlrpfl6awj" path="res://assets/style_box_texture/basic_red_button_pressed.tres" id="2_wnmk3"]
 [ext_resource type="Texture2D" uid="uid://bckiweppsv4ux" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Interface/Tilemap/tilemap_packed.png" id="5_hncaa"]
+[ext_resource type="Texture2D" uid="uid://67d8sn2eob3w" path="res://assets/kenney_mobile-controls-1/Sprites/Style A/Large (2×)/joystick_circle_pad_a.png" id="6_16yur"]
+[ext_resource type="Texture2D" uid="uid://d3o6b74vdff38" path="res://assets/kenney_mobile-controls-1/Sprites/Style A/Large (2×)/joystick_circle_nub_c.png" id="7_rcdwv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rcdwv"]
 atlas = ExtResource("5_hncaa")
@@ -46,6 +48,18 @@ expand_margin_top = 4.0
 expand_margin_right = 2.0
 expand_margin_bottom = 4.0
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ic0uy"]
+texture = ExtResource("6_16yur")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k3n1d"]
+texture = ExtResource("7_rcdwv")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2o6r5"]
+texture = ExtResource("6_16yur")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_70uel"]
+texture = ExtResource("7_rcdwv")
+
 [resource]
 Button/font_sizes/font_size = 18
 Button/fonts/font = ExtResource("1_mx4k3")
@@ -62,3 +76,7 @@ HSlider/icons/grabber_highlight = SubResource("AtlasTexture_tvnxi")
 HSlider/styles/grabber_area = SubResource("StyleBoxTexture_hncaa")
 HSlider/styles/grabber_area_highlight = SubResource("StyleBoxTexture_hncaa")
 HSlider/styles/slider = SubResource("StyleBoxTexture_4gmlt")
+VirtualJoystick/styles/normal_joystick = SubResource("StyleBoxTexture_ic0uy")
+VirtualJoystick/styles/normal_tip = SubResource("StyleBoxTexture_k3n1d")
+VirtualJoystick/styles/pressed_joystick = SubResource("StyleBoxTexture_2o6r5")
+VirtualJoystick/styles/pressed_tip = SubResource("StyleBoxTexture_70uel")
