@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://wpvrjvkvmkkm"]
+[gd_scene format=3 uid="uid://bslxrfaor2hn2"]
 
 [ext_resource type="Script" uid="uid://cc3hrq6ovf61t" path="res://scripts/main_menu.gd" id="1_06t4h"]
 [ext_resource type="Theme" uid="uid://dmum6lfqbfasj" path="res://assets/Themes/menu_button.tres" id="2_jix8l"]
