@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://dmum6lfqbfasj" path="res://assets/Themes/menu_button.tres" id="1_hdmo1"]
 [ext_resource type="Script" uid="uid://cj3vklc3jj8i0" path="res://scripts/pause_menu.gd" id="1_nwcfo"]
-[ext_resource type="PackedScene" uid="uid://dd2gp3gleromi" path="res://options_menu.tscn" id="3_05uyy"]
+[ext_resource type="PackedScene" uid="uid://c3hpboapne5ss" path="res://options_menu.tscn" id="3_05uyy"]
 
 [node name="PauseMenu" type="Control" unique_id=1166785966]
 process_mode = 3
