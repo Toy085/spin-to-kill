@@ -46,6 +46,18 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 14
 
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1642093246]
+layout_mode = 2
+size_flags_vertical = 3
+text = "ART:
+Tiny Dungeon (1.0),
+Mobile Controls (1.0)
+Desert Shooter Pack (1.0)
+Created/distributed by Kenney (www.kenney.nl)
+MUSIC:
+A Bag of Chips
+By Zane Little"
+
 [node name="BackButton" type="Button" parent="." unique_id=113848584]
 custom_minimum_size = Vector2(80, 40)
 custom_maximum_size = Vector2(150, 60)
