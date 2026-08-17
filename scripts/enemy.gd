@@ -28,10 +28,11 @@ func _ready() -> void:
 	if rng < 0.8:
 		enemy_type = Type.walk
 		animated_sprite_2d.play("Enemy1")
-	elif rng < 0.9:
+	elif rng < 1:
 		enemy_type = Type.fly
 		speed = speed * 1.25
 		animated_sprite_2d.play("Enemy2")
+	
 
 func _process(delta: float) -> void:
 	if health <= 0:
@@ -47,7 +48,7 @@ func _process(delta: float) -> void:
 				knockback_velocity = knockback_velocity.move_toward(Vector2.ZERO, 500 * delta)
 			Type.fly:
 				if global_position.distance_to(player.global_position) < 150:
-					if attack_cooldown.time_left < attack_cooldown.wait_time / 2:
+					if attack_cooldown.is_stopped():
 						shoot_bullet()
 						attack_cooldown.start()
 					

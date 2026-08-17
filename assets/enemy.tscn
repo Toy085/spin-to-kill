@@ -55,7 +55,7 @@ shape = SubResource("RectangleShape2D_gs0tk")
 sprite_frames = SubResource("SpriteFrames_oaf1g")
 animation = &"Enemy2"
 autoplay = "Enemy1"
-frame_progress = 0.042627554
+frame_progress = 0.38757095
 
 [node name="AttackArea" type="Area2D" parent="." unique_id=1528390596]
 
@@ -64,6 +64,7 @@ position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_oaf1g")
 
 [node name="AttackCooldown" type="Timer" parent="." unique_id=684558751]
+one_shot = true
 autostart = true
 
 [connection signal="body_entered" from="AttackArea" to="." method="_on_attact_area_body_entered"]
