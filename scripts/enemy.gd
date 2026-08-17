@@ -25,7 +25,7 @@ func _ready() -> void:
 	player = get_tree().get_first_node_in_group("player")
 	
 	var rng = randf()
-	if rng < 0.8:
+	if rng < 0.9:
 		enemy_type = Type.walk
 		if randi_range(0, 1) > 0:
 			animated_sprite_2d.play("Enemy1")
