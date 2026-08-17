@@ -27,7 +27,12 @@ func _ready() -> void:
 	var rng = randf()
 	if rng < 0.8:
 		enemy_type = Type.walk
-		animated_sprite_2d.play("Enemy1")
+		if randi_range(0, 1) > 0:
+			animated_sprite_2d.play("Enemy1")
+		else:
+			animated_sprite_2d.play("Enemy3")
+			speed = speed * 1.5
+			health = randi_range(1, 5)
 	elif rng < 1:
 		enemy_type = Type.fly
 		speed = speed * 1.25
