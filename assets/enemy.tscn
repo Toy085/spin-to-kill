@@ -55,7 +55,7 @@ shape = SubResource("RectangleShape2D_gs0tk")
 sprite_frames = SubResource("SpriteFrames_oaf1g")
 animation = &"Enemy2"
 autoplay = "Enemy1"
-frame_progress = 0.5690189
+frame_progress = 0.042627554
 
 [node name="AttackArea" type="Area2D" parent="." unique_id=1528390596]
 

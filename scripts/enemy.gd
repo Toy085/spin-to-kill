@@ -6,6 +6,7 @@ class_name Enemy
 @export var attack_damage: int = 1
 @export var knockback_strength = 350
 
+@onready var bullet_scene: PackedScene = preload("res://assets/bullet.tscn")
 @onready var coin: PackedScene = preload("res://coin.tscn")
 @onready var attack_cooldown: Timer = $AttackCooldown
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
@@ -45,7 +46,11 @@ func _process(delta: float) -> void:
 	
 				knockback_velocity = knockback_velocity.move_toward(Vector2.ZERO, 500 * delta)
 			Type.fly:
-				if global_position.distance_to(player.global_position) < 50:
+				if global_position.distance_to(player.global_position) < 150:
+					if attack_cooldown.time_left < attack_cooldown.wait_time / 2:
+						shoot_bullet()
+						attack_cooldown.start()
+					
 					velocity = knockback_velocity
 					move_and_slide()
 					
@@ -88,6 +93,13 @@ func _on_attact_area_body_exited(body: Node2D) -> void:
 
 func _on_attact_cooldown_timeout() -> void:
 	attack_player()
+
+func shoot_bullet() -> void:
+	if bullet_scene and player:
+		var bullet = bullet_scene.instantiate()
+		get_parent().add_child(bullet)
+		bullet.global_position = global_position
+		bullet.direction = (player.global_position - global_position).normalized()
 
 func attack_player() -> void:
 	if player_in_range and health > 0:
