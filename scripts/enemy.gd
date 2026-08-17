@@ -8,6 +8,7 @@ class_name Enemy
 
 @onready var coin: PackedScene = preload("res://coin.tscn")
 @onready var attack_cooldown: Timer = $AttackCooldown
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 var player_in_range: CharacterBody2D = null
 
@@ -16,19 +17,48 @@ var health = randi_range(5, 20)
 
 var knockback_velocity: Vector2 = Vector2.ZERO
 
+enum Type { walk, fly }
+var enemy_type: Type = Type.walk
+
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("player")
+	
+	var rng = randf()
+	if rng < 0.8:
+		enemy_type = Type.walk
+		animated_sprite_2d.play("Enemy1")
+	elif rng < 0.9:
+		enemy_type = Type.fly
+		speed = speed * 1.25
+		animated_sprite_2d.play("Enemy2")
 
 func _process(delta: float) -> void:
 	if health <= 0:
 		die()
 
 	if player:
-		var direction = (player.global_position - global_position).normalized()
-		velocity = direction * speed + knockback_velocity
-		move_and_slide()
-		
-		knockback_velocity = knockback_velocity.move_toward(Vector2.ZERO, 500 * delta)
+		match enemy_type:
+			Type.walk:
+				var direction = (player.global_position - global_position).normalized()
+				velocity = direction * speed + knockback_velocity
+				move_and_slide()
+	
+				knockback_velocity = knockback_velocity.move_toward(Vector2.ZERO, 500 * delta)
+			Type.fly:
+				if global_position.distance_to(player.global_position) < 50:
+					velocity = knockback_velocity
+					move_and_slide()
+					
+					knockback_velocity = knockback_velocity.move_toward(Vector2.ZERO, 500 * delta)
+					
+					return
+				
+				var direction = (player.global_position - global_position).normalized()
+				
+				velocity = direction * speed + knockback_velocity
+				move_and_slide()
+	
+				knockback_velocity = knockback_velocity.move_toward(Vector2.ZERO, 500 * delta)
 
 func damage(damage: int, dir: Vector2) -> void:
 	health -= damage
