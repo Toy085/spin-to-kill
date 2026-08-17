@@ -1,18 +1,17 @@
 [gd_scene format=3 uid="uid://dcb85p1q3rg66"]
 
-[ext_resource type="Texture2D" uid="uid://bn32j31lrnm5v" path="res://assets/images/RangeIcon.png" id="1_5orsb"]
 [ext_resource type="Script" uid="uid://csifhdvnkxnmv" path="res://scripts/bullet.gd" id="1_rcgj2"]
+[ext_resource type="Texture2D" uid="uid://g0u2myhkqso3" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Weapons/Tiles/tile_0023.png" id="2_rcgj2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gs0tk"]
-radius = 3.0
+radius = 2.0
 
 [node name="Bullet" type="Node2D" unique_id=1168931207]
 script = ExtResource("1_rcgj2")
 speed = 100.0
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=326783346]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_5orsb")
+[node name="Tile0023" type="Sprite2D" parent="." unique_id=1058335663]
+texture = ExtResource("2_rcgj2")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=137081151]
 
