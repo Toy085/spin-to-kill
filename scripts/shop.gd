@@ -36,13 +36,7 @@ func _ready() -> void:
 		coinlabel.text = "[color=black]%s: [outline_size=6][color=gold]%s[/color][/outline_size]" % [tr("KEY_COINS"), Global.total_money]
 
 func _on_spin_button_pressed() -> void:
-	if is_spinning:
-		return
-
-	if item_pool.is_empty():
-		return
-		
-	if spun:
+	if is_spinning or item_pool.is_empty() or spun:
 		return
 
 	is_spinning = true
@@ -80,11 +74,9 @@ func display_reward_cards() -> void:
 	if not card_container or not card_scene:
 		return
 		
-	# Clear out any card clones left over from old games
 	for child in card_container.get_children():
 		child.queue_free()
 		
-	# Build 3 separate interactive item cards
 	for i in range(rolleditems.size()):
 		var item = rolleditems[i]
 		if item == null: 
@@ -94,16 +86,13 @@ func display_reward_cards() -> void:
 		card_container.add_child(card_instance)
 		card_instance.setup_card(item)
 		
-		# Optional: If any card triggers a purchase, update all other cards' price tags 
 		card_instance.bought.connect(_on_card_purchased)
 		
-	# Smooth fade or immediate visibility switch
 	card_container.show()
 
 func _on_card_purchased() -> void:
-	#get_tree().change_scene_to_file("res://world.tscn")
 	if coinlabel:
-		coinlabel.text = "[color=black]COINS: [outline_size=6][color=gold]" + str(Global.total_money) + "[/color][/outline_size]"
+		coinlabel.text = "[color=black]%s: [outline_size=6][color=gold]%s[/color][/outline_size]" % [tr("KEY_COINS"), Global.total_money]
 	
 	for card in card_container.get_children():
 		if card.has_method("setup_card") and card.current_item != null:
