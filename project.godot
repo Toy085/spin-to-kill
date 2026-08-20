@@ -13,7 +13,7 @@ config_version=5
 config/name="spin to kill"
 run/main_scene="uid://bslxrfaor2hn2"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-boot_splash/show_image=false
+boot_splash/image="uid://c1oqo0quep1sb"
 config/icon="uid://c1oqo0quep1sb"
 
 [autoload]
@@ -27,6 +27,7 @@ DialogueManager="*uid://c3rodes2l3gxb"
 window/size/viewport_width=640
 window/size/viewport_height=360
 window/stretch/mode="viewport"
+window/handheld/orientation=4
 
 [editor]
 
@@ -174,6 +175,7 @@ pointing/emulate_mouse_from_touch=false
 
 [internationalization]
 
+locale/translation_remaps={}
 locale/translations_pot_files=PackedStringArray("res://assets/dialogues/crash(GameStart).dialogue")
 
 [physics]
