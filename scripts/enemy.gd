@@ -33,6 +33,7 @@ func _ready() -> void:
 			animated_sprite_2d.play("Enemy3")
 			speed = speed * 1.5
 			health = randi_range(1, 5)
+			self.duplicate()
 	elif rng < 1:
 		enemy_type = Type.fly
 		speed = speed * 1.25
