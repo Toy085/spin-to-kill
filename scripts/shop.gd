@@ -33,7 +33,7 @@ func _ready() -> void:
 		card_container.hide()
 		
 	if coinlabel:
-		coinlabel.text = "[color=black]COINS: [outline_size=6][color=gold]" + str(Global.total_money) + "[/color][/outline_size]"
+		coinlabel.text = "[color=black]%s: [outline_size=6][color=gold]%s[/color][/outline_size]" % [tr("KEY_COINS"), Global.total_money]
 
 func _on_spin_button_pressed() -> void:
 	if is_spinning:
