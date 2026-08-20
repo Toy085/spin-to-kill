@@ -8,13 +8,22 @@ var health: int
 var max_health: int = 100
 var speed: int = 100
 var damage: int = 5
-var greed: int = 0 
+var greed: int = 0
 var coin_radius: float = 32
 var axe_range: float = 50
 
 var crash_scene: bool = false
 
 var item_levels: Dictionary = {}
+
+func _ready() -> void:
+	var language = "automatic"
+# Load here language from the user settings file
+	if language == "automatic":
+		var preferred_language = OS.get_locale_language()
+		TranslationServer.set_locale(preferred_language)
+	else:
+		TranslationServer.set_locale(language)
 
 func get_item_level(item_name: String) -> int:
 	return item_levels.get(item_name, 0)
