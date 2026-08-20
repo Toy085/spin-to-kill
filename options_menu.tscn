@@ -29,7 +29,7 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 23.0
 grow_horizontal = 2
-text = "Options"
+text = "KEY_OPTIONS"
 label_settings = SubResource("LabelSettings_7agid")
 horizontal_alignment = 1
 
@@ -166,7 +166,7 @@ offset_transform_position = Vector2(0, 35)
 focus_neighbor_top = NodePath("../VBoxContainer/FullscreenLabel/FullscreenToggle")
 focus_neighbor_bottom = NodePath("../VBoxContainer/MasterSliderLabel/AudioControl")
 theme = ExtResource("2_t1lix")
-text = "BACK"
+text = "KEY_BACK"
 
 [connection signal="value_changed" from="VBoxContainer/MasterSliderLabel/AudioControl" to="VBoxContainer/MasterSliderLabel/AudioControl" method="_on_value_changed"]
 [connection signal="value_changed" from="VBoxContainer/MusicSliderLabel/AudioControl" to="VBoxContainer/MusicSliderLabel/AudioControl" method="_on_value_changed"]

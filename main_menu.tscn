@@ -61,7 +61,7 @@ theme_override_constants/separation = 12
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=345732848]
 layout_mode = 2
 size_flags_vertical = 0
-text = "Spin To KILL"
+text = "KEY_TITLE"
 label_settings = SubResource("LabelSettings_gs0tk")
 horizontal_alignment = 1
 
@@ -74,7 +74,7 @@ size_flags_vertical = 4
 focus_neighbor_top = NodePath("../CreditsButton")
 focus_neighbor_bottom = NodePath("../OptionsButton")
 theme = ExtResource("2_jix8l")
-text = "START"
+text = "KEY_PLAY"
 
 [node name="OptionsButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=954113827]
 custom_minimum_size = Vector2(80, 40)
@@ -85,7 +85,7 @@ size_flags_vertical = 4
 focus_neighbor_top = NodePath("../StartButton")
 focus_neighbor_bottom = NodePath("../QuitButton")
 theme = ExtResource("2_jix8l")
-text = "OPTIONS"
+text = "KEY_OPTIONS"
 
 [node name="QuitButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1470926924]
 custom_minimum_size = Vector2(80, 40)
@@ -97,7 +97,7 @@ offset_transform_position = Vector2(0, 35)
 focus_neighbor_top = NodePath("../OptionsButton")
 focus_neighbor_bottom = NodePath("../CreditsButton")
 theme = ExtResource("2_jix8l")
-text = "QUIT"
+text = "KEY_QUIT"
 
 [node name="CreditsButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=323340869]
 custom_minimum_size = Vector2(80, 40)
@@ -108,7 +108,7 @@ size_flags_vertical = 4
 focus_neighbor_top = NodePath("../QuitButton")
 focus_neighbor_bottom = NodePath("../StartButton")
 theme = ExtResource("2_jix8l")
-text = "CREDITS"
+text = "KEY_CREDITS"
 
 [node name="Options" parent="." unique_id=1899668772 instance=ExtResource("3_fu7sn")]
 visible = false

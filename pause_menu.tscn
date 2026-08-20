@@ -51,7 +51,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 focus_neighbor_bottom = NodePath("../OptionsButton")
 theme = ExtResource("1_hdmo1")
-text = "RESUME"
+text = "KEY_RESUME"
 
 [node name="OptionsButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1406917053]
 custom_minimum_size = Vector2(80, 40)
@@ -62,7 +62,7 @@ size_flags_vertical = 4
 focus_neighbor_top = NodePath("../ResumeButton")
 focus_neighbor_bottom = NodePath("../QuitButton")
 theme = ExtResource("1_hdmo1")
-text = "OPTIONS"
+text = "KEY_OPTIONS"
 
 [node name="QuitButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=95163483]
 custom_minimum_size = Vector2(80, 40)
@@ -74,7 +74,7 @@ offset_transform_position = Vector2(0, 35)
 focus_neighbor_top = NodePath("../OptionsButton")
 focus_neighbor_bottom = NodePath("../CreditsButton")
 theme = ExtResource("1_hdmo1")
-text = "QUIT"
+text = "KEY_QUIT"
 
 [node name="CreditsButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1466850878]
 visible = false
@@ -85,7 +85,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 focus_neighbor_top = NodePath("../QuitButton")
 theme = ExtResource("1_hdmo1")
-text = "CREDITS"
+text = "KEY_CREDITS"
 
 [node name="Options" parent="." unique_id=1899668772 instance=ExtResource("3_05uyy")]
 visible = false
