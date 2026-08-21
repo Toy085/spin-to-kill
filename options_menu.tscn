@@ -51,7 +51,7 @@ theme_override_constants/separation = 14
 
 [node name="MasterSliderLabel" type="Label" parent="VBoxContainer" unique_id=1430953078]
 layout_mode = 2
-text = "Master:"
+text = "KEY_SOUND_SLIDER_MAIN"
 
 [node name="AudioControl" type="HSlider" parent="VBoxContainer/MasterSliderLabel" unique_id=192352771]
 layout_mode = 1
@@ -76,7 +76,7 @@ audio_bus_name = "Master"
 
 [node name="MusicSliderLabel" type="Label" parent="VBoxContainer" unique_id=233345757]
 layout_mode = 2
-text = "Music:"
+text = "KEY_SOUND_SLIDER_MUSIC"
 
 [node name="AudioControl" type="HSlider" parent="VBoxContainer/MusicSliderLabel" unique_id=2023721862]
 layout_mode = 1
@@ -101,7 +101,7 @@ audio_bus_name = "Music"
 
 [node name="SFXSliderLabel" type="Label" parent="VBoxContainer" unique_id=440729684]
 layout_mode = 2
-text = "SFX:"
+text = "KEY_SOUND_SLIDER_SFX"
 
 [node name="AudioControl" type="HSlider" parent="VBoxContainer/SFXSliderLabel" unique_id=1640723380]
 layout_mode = 1
@@ -128,7 +128,7 @@ audio_bus_name = "SFX"
 layout_mode = 2
 offset_transform_enabled = true
 offset_transform_position = Vector2(0, 4)
-text = "Fullscreen:"
+text = "KEY_OPTIONS_FULLSCREEN"
 
 [node name="FullscreenToggle" type="CheckButton" parent="VBoxContainer/FullscreenLabel" unique_id=914928941]
 layout_mode = 1
