@@ -4,6 +4,17 @@
 [ext_resource type="Script" uid="uid://cj3vklc3jj8i0" path="res://scripts/pause_menu.gd" id="1_nwcfo"]
 [ext_resource type="PackedScene" uid="uid://c3hpboapne5ss" path="res://options_menu.tscn" id="3_05uyy"]
 
+[sub_resource type="FontVariation" id="FontVariation_lbr8e"]
+spacing_glyph = 3
+
+[sub_resource type="LabelSettings" id="LabelSettings_05uyy"]
+font = SubResource("FontVariation_lbr8e")
+font_size = 64
+outline_size = 18
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 20
+shadow_color = Color(0, 0, 0, 0.19607843)
+
 [node name="PauseMenu" type="Control" unique_id=1166785966]
 process_mode = 3
 layout_mode = 3
@@ -22,6 +33,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 1, 1, 0.49411765)
+
+[node name="Label" type="Label" parent="." unique_id=1015903255]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 88.0
+grow_horizontal = 2
+text = "KEY_PAUSE_MENU"
+label_settings = SubResource("LabelSettings_05uyy")
+horizontal_alignment = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1009477171]
 custom_minimum_size = Vector2(300, 0)
