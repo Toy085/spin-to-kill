@@ -149,9 +149,7 @@ offset_right = 18.5
 offset_bottom = -90.0
 grow_horizontal = 2
 grow_vertical = 0
-text = "Exit
-
-"
+text = "KEY_EXIT"
 
 [node name="CoinLabel" type="RichTextLabel" parent="." unique_id=43889426]
 layout_mode = 0

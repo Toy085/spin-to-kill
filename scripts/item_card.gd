@@ -30,13 +30,13 @@ func setup_card(item: ShopItem) -> void:
 	description_label.text = item.description
 	
 	if saved_level >= item.max_level:
-		buy_button.text = "MAXED"
+		buy_button.text = tr("KEY_ITEMCARD_MAX")
 		buy_button.disabled = true
 	elif bought_item:
-		buy_button.text = "BOUGHT"
+		buy_button.text = tr("KEY_ITEMCARD_BOUGHT")
 		buy_button.disabled = true
 	else:
-		buy_button.text = str(current_price) + "g"
+		buy_button.text = str(current_price) + tr("KEY_ITEMCARD_GOLD_SHORT")
 		buy_button.disabled = false
 
 func _on_buy_button_pressed() -> void:

@@ -40,6 +40,6 @@ clip_text = true
 
 [node name="BuyButton" type="Button" parent="VBoxContainer" unique_id=2065561019]
 layout_mode = 2
-text = "BUY"
+text = "KEY_ITEMCARD_BUY"
 
 [connection signal="pressed" from="VBoxContainer/BuyButton" to="." method="_on_buy_button_pressed"]
