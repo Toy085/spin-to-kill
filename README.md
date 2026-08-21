@@ -1,6 +1,6 @@
 # Spin To Kill
 
-A game made in Godot.
+A game made in Godot. This game was origanally made for [**The Very Serious Juniper Dev Game Jam**](https://itch.io/jam/theveryseriousjuniperdevgamejam).
 
 ### Development
 
