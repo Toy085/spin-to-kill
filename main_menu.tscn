@@ -5,7 +5,12 @@
 [ext_resource type="PackedScene" uid="uid://c3hpboapne5ss" path="res://options_menu.tscn" id="3_fu7sn"]
 [ext_resource type="PackedScene" uid="uid://lwmc1x5h6s3v" path="res://credits_menu.tscn" id="4_jix8l"]
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_pqjnt"]
+[sub_resource type="Gradient" id="Gradient_jix8l"]
+colors = PackedColorArray(0.20470001, 0.20470001, 0.89, 1, 1, 0.6, 0.60666656, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_2o6r5"]
+gradient = SubResource("Gradient_jix8l")
+fill = 1
 
 [sub_resource type="FontVariation" id="FontVariation_fu7sn"]
 spacing_glyph = -1
@@ -38,7 +43,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("CanvasTexture_pqjnt")
+texture = SubResource("GradientTexture2D_2o6r5")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1098200185]
 custom_minimum_size = Vector2(300, 0)
