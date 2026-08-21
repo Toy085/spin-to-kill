@@ -31,11 +31,11 @@ func _ready() -> void:
 			animated_sprite_2d.play("Enemy1")
 		else:
 			animated_sprite_2d.play("Enemy3")
-			speed = speed * 1.5
 			health = randi_range(1, 5)
 			var clone = self.duplicate() as Enemy
 			clone.global_position = global_position + Vector2(20, 0)
 			get_parent().add_child(clone)
+			speed = speed * 1.5
 	elif rng < 1:
 		enemy_type = Type.fly
 		speed = speed * 1.25
