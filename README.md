@@ -2,6 +2,15 @@
 
 A game made in Godot. This game was origanally made for [**The Very Serious Juniper Dev Game Jam**](https://itch.io/jam/theveryseriousjuniperdevgamejam).
 
+## Controls
+
+* **Move:** WASD / Left stick
+* **Attack Left:** Q / Left Click / Left shoulder button
+* **Attack Right:** E / Right Click / Right shoulder button
+* **Aim Axe Throw:** Mouse / Right stick
+* **Throw Axe (Keyboard + Mouse only):** Space
+* **Pause:** Escape 
+
 ### Development
 
 1. Clone the repo
