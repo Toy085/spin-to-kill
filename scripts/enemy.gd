@@ -21,22 +21,27 @@ var knockback_velocity: Vector2 = Vector2.ZERO
 enum Type { walk, fly }
 var enemy_type: Type = Type.walk
 
+var clone_num: int = 0
+
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("player")
-	
-	var rng = randf()
-	if rng < 0.9:
+	var rng = randi_range(1, 10)
+	if rng <= 8:
 		enemy_type = Type.walk
 		if randi_range(0, 1) > 0:
 			animated_sprite_2d.play("Enemy1")
 		else:
 			animated_sprite_2d.play("Enemy3")
 			health = randi_range(1, 5)
-			var clone = self.duplicate() as Enemy
-			clone.global_position = global_position + Vector2(20, 0)
-			get_parent().add_child(clone)
+			if not clone_num < Global.deaths:
+				var clone = self.duplicate() as Enemy
+				clone.clone_num = clone_num + 1
+				clone.global_position = global_position + Vector2(20, 0)
+				get_parent().add_child(clone)
 			speed = speed * 1.5
-	elif rng < 1:
+	elif rng == 9:
+		queue_free()
+	elif rng == 10:
 		enemy_type = Type.fly
 		speed = speed * 1.25
 		animated_sprite_2d.play("Enemy2")
