@@ -3,6 +3,9 @@ extends Panel
 
 @onready var options: Panel = $"."
 @onready var audio_control: HSlider = $VBoxContainer/MasterSliderLabel/AudioControl
+@onready var audio_control_music: HSlider = $VBoxContainer/MusicSliderLabel/AudioControl
+@onready var audio_control_sfx: HSlider = $VBoxContainer/SFXSliderLabel/AudioControl
+@onready var fullscreen_toggle: CheckButton = $VBoxContainer/FullscreenLabel/FullscreenToggle
 @onready var lang_dropdown: OptionButton = $VBoxContainer/LangLabel/LangDropdown
 
 var locales: PackedStringArray = []
