@@ -13,8 +13,8 @@ config_version=5
 config/name="spin to kill"
 run/main_scene="uid://bslxrfaor2hn2"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-boot_splash/image="uid://c1oqo0quep1sb"
-config/icon="uid://c1oqo0quep1sb"
+boot_splash/image="uid://dwd87symf8aho"
+config/icon="uid://dwd87symf8aho"
 
 [autoload]
 
