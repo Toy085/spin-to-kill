@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://cciu6xtmsl8mh" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Enemies/Tiles/tile_0006.png" id="6_npimb"]
 [ext_resource type="Texture2D" uid="uid://csptxe6ey4yjm" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Enemies/Tiles/tile_0008.png" id="7_b3050"]
 [ext_resource type="Texture2D" uid="uid://j7hs52m4ijpa" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Enemies/Tiles/tile_0009.png" id="8_fpuwb"]
+[ext_resource type="Texture2D" uid="uid://bsm8sb7bitypg" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Enemies/Tiles/tile_0000.png" id="9_fpuwb"]
+[ext_resource type="Texture2D" uid="uid://jh84t4dylbqd" path="res://assets/kenney_desert-shooter-pack_1.0/PNG/Enemies/Tiles/tile_0001.png" id="10_l6p6t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gs0tk"]
 size = Vector2(20, 21)
@@ -52,6 +54,17 @@ animations = [{
 "loop": 1,
 "name": &"Enemy3",
 "speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_fpuwb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_l6p6t")
+}],
+"loop": 1,
+"name": &"Enemy4",
+"speed": 3.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oaf1g"]
@@ -66,9 +79,8 @@ shape = SubResource("RectangleShape2D_gs0tk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1699195934]
 sprite_frames = SubResource("SpriteFrames_oaf1g")
-animation = &"Enemy3"
+animation = &"Enemy1"
 autoplay = "Enemy1"
-frame_progress = 0.80125386
 
 [node name="AttackArea" type="Area2D" parent="." unique_id=1528390596]
 

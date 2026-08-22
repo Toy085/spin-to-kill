@@ -4,7 +4,7 @@ class_name Enemy
 
 @export var speed : float = 50
 @export var attack_damage: int = 1
-@export var knockback_strength = 350
+@export var knockback_strength: float = 350
 
 @onready var bullet_scene: PackedScene = preload("res://assets/bullet.tscn")
 @onready var coin: PackedScene = preload("res://coin.tscn")
@@ -15,6 +15,7 @@ var player_in_range: CharacterBody2D = null
 
 var player: CharacterBody2D
 var health = randi_range(5, 20)
+var reward: int = randi_range(1 + Global.greed, 5 + Global.greed)
 
 var knockback_velocity: Vector2 = Vector2.ZERO
 
@@ -25,27 +26,40 @@ var clone_num: int = 0
 
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("player")
+
 	var rng = randi_range(1, 10)
 	if rng <= 8:
-		enemy_type = Type.walk
 		if randi_range(0, 1) > 0:
+			enemy_type = Type.walk
 			animated_sprite_2d.play("Enemy1")
 		else:
+			enemy_type = Type.walk
 			animated_sprite_2d.play("Enemy3")
 			health = randi_range(1, 5)
-			if not clone_num < Global.deaths:
+			if clone_num < Global.deaths:
 				var clone = self.duplicate() as Enemy
 				clone.clone_num = clone_num + 1
 				clone.global_position = global_position + Vector2(20, 0)
 				get_parent().add_child(clone)
-			speed = speed * 1.5
+			speed *= 1.5
+			reward /= 2
 	elif rng == 9:
-		queue_free()
+		# Snail
+		knockback_strength /= 2
+		speed /= 2
+		attack_damage *= 2
+		reward *= 2
+		health *= 2
+		
+		enemy_type = Type.walk
+		animated_sprite_2d.play("Enemy4")
 	elif rng == 10:
 		enemy_type = Type.fly
-		speed = speed * 1.25
+		speed *= 1.25
 		animated_sprite_2d.play("Enemy2")
-	
+		
+	if reward <= 0:
+		reward = 1
 
 func _process(delta: float) -> void:
 	if health <= 0:
@@ -88,8 +102,6 @@ func damage(damage: int, dir: Vector2) -> void:
 	knockback_velocity = dir * knockback_strength
 
 func die() -> void:
-	var reward = randi_range(1 + Global.greed, 5 + Global.greed)
-	
 	for i in range(reward):
 		var coin_instance = coin.instantiate()
 		var coin_pos = Vector2(randi_range(-32, 32), randi_range(-32, 32))
