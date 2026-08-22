@@ -145,6 +145,19 @@ grow_vertical = 2
 focus_neighbor_top = NodePath("../../SFXSliderLabel/AudioControl")
 focus_neighbor_bottom = NodePath("../../../BackButton")
 
+[node name="LangLabel" type="Label" parent="VBoxContainer" unique_id=850473916]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 4)
+text = "KEY_OPTIONS_LANG"
+
+[node name="LangDropdown" type="OptionButton" parent="VBoxContainer/LangLabel" unique_id=150896959]
+layout_mode = 0
+offset_left = 200.0
+offset_top = -0.5
+offset_right = 400.0
+offset_bottom = 23.5
+
 [node name="BackButton" type="Button" parent="." unique_id=113848584]
 custom_minimum_size = Vector2(80, 40)
 custom_maximum_size = Vector2(150, 60)
@@ -172,4 +185,5 @@ text = "KEY_BACK"
 [connection signal="value_changed" from="VBoxContainer/MusicSliderLabel/AudioControl" to="VBoxContainer/MusicSliderLabel/AudioControl" method="_on_value_changed"]
 [connection signal="value_changed" from="VBoxContainer/SFXSliderLabel/AudioControl" to="VBoxContainer/SFXSliderLabel/AudioControl" method="_on_value_changed"]
 [connection signal="toggled" from="VBoxContainer/FullscreenLabel/FullscreenToggle" to="." method="_on_fullscreen_toggle_toggled"]
+[connection signal="item_selected" from="VBoxContainer/LangLabel/LangDropdown" to="." method="_on_lang_dropdown_item_selected"]
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
