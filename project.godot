@@ -43,6 +43,12 @@ enabled=PackedStringArray("res://addons/at-icons/plugin.cfg", "res://addons/dial
 player=""
 enemy=""
 
+[importer_defaults]
+
+csv_translation={
+&"delimiter": 1
+}
+
 [input]
 
 ui_accept={
