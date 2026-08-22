@@ -4,6 +4,9 @@
 [ext_resource type="Theme" uid="uid://dmum6lfqbfasj" path="res://assets/Themes/menu_button.tres" id="2_t1lix"]
 [ext_resource type="Script" uid="uid://cvk63nm3fwnu0" path="res://scripts/audio_control.gd" id="3_4gmlt"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oxqbs"]
+bg_color = Color(0, 0.1558333, 0.17, 1)
+
 [sub_resource type="FontVariation" id="FontVariation_lbr8e"]
 spacing_glyph = 3
 
@@ -21,6 +24,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_oxqbs")
 script = ExtResource("1_lbr8e")
 
 [node name="Label" type="Label" parent="." unique_id=815195739]
