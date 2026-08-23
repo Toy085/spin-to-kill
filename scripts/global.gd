@@ -19,7 +19,6 @@ var item_levels: Dictionary = {}
 
 var is_mobile_os = OS.has_feature("mobile") or OS.has_feature("web_android") or OS.has_feature("web_ios")
 
-
 func _ready() -> void:
 	var language = "automatic"
 # Load here language from the user settings file

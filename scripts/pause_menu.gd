@@ -4,7 +4,13 @@ extends Control
 @onready var options: Panel = $Options
 @onready var resume_button: Button = $MarginContainer/VBoxContainer/ResumeButton
 
+@onready var options_button: Button = $MarginContainer/VBoxContainer/OptionsButton
+@onready var quit_button: Button = $MarginContainer/VBoxContainer/QuitButton
+
 func _ready() -> void:
+	options_button.visible = not Global.is_mobile_os
+	quit_button.visible = not Global.is_mobile_os
+	
 	hide()
 
 func _input(event):
