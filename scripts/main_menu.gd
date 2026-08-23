@@ -3,12 +3,18 @@ extends Control
 
 @export var game_scene_path : String = "res://world.tscn"
 
+@onready var options_button: Button = $MarginContainer/VBoxContainer/OptionsButton
+@onready var quit_button: Button = $MarginContainer/VBoxContainer/QuitButton
+
 @onready var options: Panel = $Options
 @onready var credits: Panel = $Credits
 
 @onready var start_button: Button = $MarginContainer/VBoxContainer/StartButton
 
 func _ready():
+	options_button.visible = not Global.is_mobile_os
+	quit_button.visible = not Global.is_mobile_os
+	
 	start_button.grab_focus()
 	
 func _on_start_button_pressed() -> void:
