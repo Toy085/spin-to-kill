@@ -8,9 +8,12 @@ extends Panel
 @onready var fullscreen_toggle: CheckButton = $VBoxContainer/FullscreenLabel/FullscreenToggle
 @onready var lang_dropdown: OptionButton = $VBoxContainer/LangLabel/LangDropdown
 
+@onready var fullscreen_label: Label = $VBoxContainer/FullscreenLabel
+
 var locales: PackedStringArray = []
 
 func _ready() -> void:
+	fullscreen_label.visible = not (Global.is_web or Global.is_mobile_os)
 	_setup_language_dropdown()
 
 func _setup_language_dropdown() -> void:

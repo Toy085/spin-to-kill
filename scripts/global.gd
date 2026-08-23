@@ -18,10 +18,11 @@ var crash_scene: bool = false
 var item_levels: Dictionary = {}
 
 var is_mobile_os = OS.has_feature("mobile") or OS.has_feature("web_android") or OS.has_feature("web_ios")
+var is_web = OS.has_feature("web")
 
 func _ready() -> void:
 	var language = "automatic"
-# Load here language from the user settings file
+	
 	if language == "automatic":
 		var preferred_language = OS.get_locale_language()
 		TranslationServer.set_locale(preferred_language)
