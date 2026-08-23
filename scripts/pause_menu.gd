@@ -9,7 +9,7 @@ extends Control
 
 func _ready() -> void:
 	options_button.visible = not Global.is_mobile_os
-	quit_button.visible = not Global.is_mobile_os
+	quit_button.visible = not (Global.is_mobile_os or Global.is_web)
 	
 	hide()
 

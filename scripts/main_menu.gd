@@ -13,7 +13,7 @@ extends Control
 
 func _ready():
 	options_button.visible = not Global.is_mobile_os
-	quit_button.visible = not Global.is_mobile_os
+	quit_button.visible = not (Global.is_mobile_os or Global.is_web)
 	
 	start_button.grab_focus()
 	
