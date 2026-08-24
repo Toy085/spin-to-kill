@@ -79,7 +79,7 @@ shape = SubResource("RectangleShape2D_gs0tk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1699195934]
 sprite_frames = SubResource("SpriteFrames_oaf1g")
-animation = &"Enemy1"
+animation = &"Enemy3"
 autoplay = "Enemy1"
 
 [node name="AttackArea" type="Area2D" parent="." unique_id=1528390596]
@@ -94,4 +94,4 @@ autostart = true
 
 [connection signal="body_entered" from="AttackArea" to="." method="_on_attact_area_body_entered"]
 [connection signal="body_exited" from="AttackArea" to="." method="_on_attact_area_body_exited"]
-[connection signal="timeout" from="AttackCooldown" to="." method="_on_attact_cooldown_timeout"]
+[connection signal="timeout" from="AttackCooldown" to="." method="_on_attack_cooldown_timeout"]
