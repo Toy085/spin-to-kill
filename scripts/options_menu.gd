@@ -26,7 +26,7 @@ func save_settings():
 	config.set_value("Options", "Fullscreen", fullscreen_toggle.button_pressed)
 	
 	config.save("user://settings.cfg")
-	
+
 func load_settings() -> void:
 	var config = ConfigFile.new()
 	if config.load("user://settings.cfg") != OK:
