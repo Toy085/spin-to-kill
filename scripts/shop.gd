@@ -100,4 +100,5 @@ func _on_card_purchased() -> void:
 
 
 func _on_exit_button_pressed() -> void:
+	Global.save_game()
 	get_tree().change_scene_to_file("res://world.tscn")
