@@ -51,7 +51,7 @@ offset_right = 250.0
 offset_bottom = -60.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 14
+theme_override_constants/separation = 16
 
 [node name="MasterSliderLabel" type="Label" parent="VBoxContainer" unique_id=1430953078]
 layout_mode = 2

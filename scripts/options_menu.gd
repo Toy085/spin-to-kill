@@ -13,8 +13,32 @@ extends Panel
 var locales: PackedStringArray = []
 
 func _ready() -> void:
+	load_settings()
 	fullscreen_label.visible = not (Global.is_web or Global.is_mobile_os)
 	_setup_language_dropdown()
+	
+func save_settings():
+	var config = ConfigFile.new()
+	
+	config.set_value("Options", "Master", audio_control.value)
+	config.set_value("Options", "Music", audio_control_music.value)
+	config.set_value("Options", "SFX", audio_control_sfx.value)
+	config.set_value("Options", "Fullscreen", fullscreen_toggle.button_pressed)
+	
+	config.save("user://settings.cfg")
+	
+func load_settings() -> void:
+	var config = ConfigFile.new()
+	if config.load("user://settings.cfg") != OK:
+		return
+		
+	audio_control.value = config.get_value("Options", "Master", audio_control.value)
+	audio_control_music.value = config.get_value("Options", "Music", audio_control_music.value)
+	audio_control_sfx.value = config.get_value("Options", "SFX", audio_control_sfx.value)
+	
+	var is_fullscreen: bool = config.get_value("Options", "Fullscreen", fullscreen_toggle.button_pressed)
+	fullscreen_toggle.button_pressed = is_fullscreen
+	_on_fullscreen_toggle_toggled(is_fullscreen)
 
 func _setup_language_dropdown() -> void:
 	lang_dropdown.clear()
@@ -37,6 +61,7 @@ func _setup_language_dropdown() -> void:
 		lang_dropdown.select(select_index)
 
 func _on_back_button_pressed() -> void:
+	save_settings()
 	options.visible = false
 
 func open_options():
