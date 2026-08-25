@@ -83,3 +83,6 @@ func load_game() -> void:
 		done_tutorial = data.done_tutorial
 		
 		health = max_health
+
+func delete_save() -> void:
+	pass
