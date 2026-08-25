@@ -1,8 +1,8 @@
 ~ start
 Unknown: [[Hi|Hello|Howdy]], thank you for playing my game.
-Unknown: Welcome to the tutorial, i'll show you how the game works.
+Unknown: Welcome to the tutorial, I'll show you how the game works.
 Unknown: My name is Bob.
-Bob: Let us start with movement
+Bob: Let us start with movement.
 Bob: Use WASD or the left joystick to move.
 Bob: Try it out!
 do wait_for_player_distance(300.0)
@@ -10,14 +10,14 @@ Bob: [[Great job!|Awesome!]] Now let's continue.
 Bob: Now it's time for how you'll defend yourself.
 Bob: You've been given an axe.
 Bob: There are two ways to use it for attacking.
-Bob: First, by spining it around yourself.
+Bob: First, by spinning it around yourself.
 Bob: You can do this by pressing left/right mouse buttons, Q/E or left/right shoulder buttons.
 Bob: Try it!
 do wait_for_player_spin_attack()
 Bob: Great!
-Bob: Second way is by throwing it.
+Bob: The second way is by throwing it.
 Bob: With K/M you aim with the mouse and throw by pressing spacebar.
-Bob: Meanwhile on controller/touch you aim with the right joystick and throw by releasing it.
+Bob: Meanwhile, on controller/touch you aim with the right joystick and throw by releasing it.
 do wait_for_player_throw()
 Bob: Well done!
 Bob: Now you are ready.
