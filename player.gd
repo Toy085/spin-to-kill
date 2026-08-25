@@ -17,6 +17,8 @@ var joystick_dir: Vector2
 var last_aim_dir: Vector2
 var is_aiming_joystick: bool = false
 
+signal axe_thrown
+
 func _ready() -> void:
 	cooldown_timer.wait_time = Global.cooldown
 	Global.health = Global.max_health
@@ -98,6 +100,7 @@ func throw_axe(forced_dir: Vector2 = Vector2.ZERO) -> void:
 			dir = (mouse_pos - global_position).normalized()
 	
 	axe_instance.Thrown = true
+	axe_thrown.emit()
 	axe_instance.pos = global_position + (dir * Global.axe_range)
 	axe_instance.global_position = global_position
 	

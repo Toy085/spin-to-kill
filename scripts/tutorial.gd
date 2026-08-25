@@ -33,8 +33,7 @@ func wait_for_player_throw() -> void:
 	if not player:
 		return
 	
-	while not Input.is_action_just_pressed("throw_axe"):
-		await get_tree().process_frame
+	await player.axe_thrown
 
 func quit() -> void:
 	Global.done_tutorial = true
