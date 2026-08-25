@@ -3,14 +3,22 @@ extends Node2D
 
 var distance_player
 var player: CharacterBody2D
+var tut = self
 
 @export var tutorial_dialouge: DialogueResource
 
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("player")
 	
-	DialogueManager.show_example_dialogue_balloon(tutorial_dialouge, "start")
+	DialogueManager.show_example_dialogue_balloon(tutorial_dialouge, "start", [self])
 	await DialogueManager.dialogue_ended
 
-func _process(_delta: float) -> void:
-	distance_player = global_position.direction_to(player.global_position)
+func wait_for_player_distance(target_distance: float) -> void:
+	if not player:
+		return
+		
+	var start_pos: Vector2 = player.global_position
+	
+	# Pause inside the function until the distance traveled reaches target_distance
+	while player.global_position.distance_to(start_pos) < target_distance:
+		await get_tree().process_frame

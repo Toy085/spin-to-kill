@@ -1,6 +1,10 @@
 ~ start
 Unkown: [[Hi|Hello|Howdy]], thank you for playing my game.
-Unkown: Welcome to the tutorial, i'll be showing you how the game works.
-Unkown: My name is Bob
-Bob: For more information see the online documentation.
+Unkown: Welcome to the tutorial, i'll show you how the game works.
+Unkown: My name is Bob.
+Bob: Let us start with movement
+Bob: Use WASD or the left joystick to move.
+Bob: Try it out!
+do wait_for_player_distance(300.0)
+Bob: Great job! Now let's continue.
 => END
