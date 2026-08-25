@@ -22,6 +22,10 @@ Global="*uid://bpkvyu7xypnxw"
 MusicManager="*uid://cupa4ebqa2rnu"
 DialogueManager="*uid://c3rodes2l3gxb"
 
+[dialogue_manager]
+
+editor/translations/default_csv_delimiter="Semicolon"
+
 [display]
 
 window/size/viewport_width=640
