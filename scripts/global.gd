@@ -59,6 +59,7 @@ func save_game() -> void:
 	data.greed = greed
 	data.coin_radius = coin_radius
 	data.axe_range = axe_range
+	data.done_tutorial = done_tutorial
 	
 	ResourceSaver.save(data, SAVE_PATH)
 
@@ -79,5 +80,6 @@ func load_game() -> void:
 		greed = data.greed
 		coin_radius = data.coin_radius
 		axe_range = data.axe_range
+		done_tutorial = data.done_tutorial
 		
 		health = max_health

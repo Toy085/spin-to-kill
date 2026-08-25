@@ -52,8 +52,7 @@ func wait_for_player_throw() -> void:
 	
 	player.set_physics_process(false)
 
-
 func quit() -> void:
 	Global.done_tutorial = true
-	Global.save_game()
+	await Global.save_game()
 	get_tree().change_scene_to_file("res://world.tscn")

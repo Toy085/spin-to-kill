@@ -10,6 +10,7 @@ extends Control
 @onready var credits: Panel = $Credits
 
 @onready var start_button: Button = $MarginContainer/VBoxContainer/StartButton
+@onready var tutorial_confirmation_dialog: ConfirmationDialog = $MarginContainer/TutorialConfirmationDialog
 
 func _ready():
 	options_button.visible = not Global.is_mobile_os
@@ -18,7 +19,10 @@ func _ready():
 	start_button.grab_focus()
 	
 func _on_start_button_pressed() -> void:
-	get_tree().change_scene_to_file(game_scene_path)
+	if Global.done_tutorial == false:
+		tutorial_confirmation_dialog.popup_centered()
+	else:
+		get_tree().change_scene_to_file(game_scene_path)
 
 func _on_quit_button_pressed() -> void:
 	get_tree().quit()
@@ -30,3 +34,10 @@ func _on_options_button_pressed() -> void:
 func _on_credits_button_pressed() -> void:
 	credits.visible = true
 	credits.open_credits()
+
+
+func _on_tutorial_confirmation_dialog_confirmed() -> void:
+	get_tree().change_scene_to_file("res://Tutorial.tscn")
+
+func _on_tutorial_confirmation_dialog_canceled() -> void:
+	get_tree().change_scene_to_file(game_scene_path)

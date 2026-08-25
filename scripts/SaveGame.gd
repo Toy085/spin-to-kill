@@ -14,3 +14,4 @@ extends Resource
 @export var greed: int = 0
 @export var coin_radius: float = 32
 @export var axe_range: float = 50
+@export var done_tutorial: bool = false
