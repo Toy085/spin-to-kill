@@ -16,9 +16,15 @@ func _ready() -> void:
 func wait_for_player_distance(target_distance: float) -> void:
 	if not player:
 		return
-		
+	
 	var start_pos: Vector2 = player.global_position
 	
-	# Pause inside the function until the distance traveled reaches target_distance
 	while player.global_position.distance_to(start_pos) < target_distance:
+		await get_tree().process_frame
+
+func wait_for_player_spin_attack() -> void:
+	if not player:
+		return
+	
+	while not player.is_spinning:
 		await get_tree().process_frame

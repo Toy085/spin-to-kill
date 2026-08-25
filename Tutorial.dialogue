@@ -6,5 +6,8 @@ Bob: Let us start with movement
 Bob: Use WASD or the left joystick to move.
 Bob: Try it out!
 do wait_for_player_distance(300.0)
-Bob: Great job! Now let's continue.
+Bob: [[Great job!|Awesome!]] Now let's continue.
+Bob: Now it's time for how you'll defend yourself.
+do wait_for_player_spin_attack()
+Bob: Great!
 => END
