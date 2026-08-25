@@ -28,3 +28,10 @@ func wait_for_player_spin_attack() -> void:
 	
 	while not player.is_spinning:
 		await get_tree().process_frame
+		
+func wait_for_player_throw() -> void:
+	if not player:
+		return
+	
+	while not Input.is_action_just_pressed("throw_axe"):
+		await get_tree().process_frame
