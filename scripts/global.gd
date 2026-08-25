@@ -14,6 +14,7 @@ var greed: int = 0
 var coin_radius: float = 32
 var axe_range: float = 50
 var deaths: int = 0
+var done_tutorial: bool = false
 
 var crash_scene: bool = false
 

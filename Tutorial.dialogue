@@ -20,4 +20,7 @@ Bob: With K/M you aim with the mouse and throw by pressing spacebar.
 Bob: Meanwhile on controller/touch you aim with the right joystick and throw by releasing it.
 do wait_for_player_throw()
 Bob: Well done!
+Bob: Now you are ready.
+Bob: Goodbye!
+do quit()
 => END
