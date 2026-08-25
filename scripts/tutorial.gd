@@ -1,4 +1,4 @@
-@icon("res://addons/at-icons/node/info.svg")
+@icon("res://addons/at-icons/node2d/info.svg")
 extends Node2D
 
 var distance_player
