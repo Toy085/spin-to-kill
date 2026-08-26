@@ -76,3 +76,7 @@ func _on_fullscreen_toggle_toggled(toggled_on: bool) -> void:
 func _on_lang_dropdown_item_selected(index: int) -> void:
 	var selected_locale: String = locales[index]
 	TranslationServer.set_locale(selected_locale)
+
+
+func _on_delete_button_pressed() -> void:
+	Global.delete_save()

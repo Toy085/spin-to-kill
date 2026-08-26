@@ -85,4 +85,7 @@ func load_game() -> void:
 		health = max_health
 
 func delete_save() -> void:
-	pass
+	var new_save = SaveGame.new()
+	
+	ResourceSaver.save(new_save, SAVE_PATH)
+	load_game()
