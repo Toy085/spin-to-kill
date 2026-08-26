@@ -12,8 +12,8 @@ git clone https://github.com/Toy085/spin-to-kill
 2. Open the project.godot file in godot
 
 ## How to Play
-1. Download the game from [GitHub Releases](https://github.com/Toy085/spin-to-kill/releases) or [Itch.io](https://toy085.itch.io/).
-2. Extract (unzip) the `game.zip` file on your computer.
+1. Download the game from [Itch.io](https://toy085.itch.io/stk).
+2. Extract (unzip) the zip file on your computer.
 3. Open the folder and run `spin to kill.exe`.
 
 ### Controls
