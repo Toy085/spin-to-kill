@@ -30,4 +30,4 @@ git clone https://github.com/Toy085/spin-to-kill
 <img width="1861" height="1049" alt="image" src="https://github.com/user-attachments/assets/5ccf8651-0cc5-480e-a195-bcbbf493ba52" />
 
 ## AI use
-AI has been used for making the shop item cards scripts and shop roulette.
+AI has been used for making the shop item cards scripts and shop roulette. AI was also used for some code completion.
