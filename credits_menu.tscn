@@ -8,11 +8,13 @@ spacing_glyph = 3
 
 [sub_resource type="LabelSettings" id="LabelSettings_7agid"]
 font = SubResource("FontVariation_lbr8e")
-font_size = 64
+font_size = 42
 outline_size = 18
 outline_color = Color(0, 0, 0, 1)
 shadow_size = 20
 shadow_color = Color(0, 0, 0, 0.19607843)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tgbea"]
 
 [node name="Credits" type="Panel" unique_id=1899668772]
 anchors_preset = 15
@@ -33,17 +35,17 @@ label_settings = SubResource("LabelSettings_7agid")
 horizontal_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1919244164]
-custom_minimum_size = Vector2(350, 210)
-custom_maximum_size = Vector2(400, 220)
+custom_minimum_size = Vector2(350, 225)
+custom_maximum_size = Vector2(400, 300)
 layout_mode = 1
 anchors_preset = 13
 anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -250.0
-offset_top = 90.0
-offset_right = 250.0
-offset_bottom = -60.0
+offset_left = -200.0
+offset_top = 50.5
+offset_right = 200.0
+offset_bottom = -78.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 14
@@ -58,7 +60,9 @@ Desert Shooter Pack (1.0)
 Created/distributed by Kenney (www.kenney.nl)
 MUSIC:
 A Bag of Chips
-By Zane Little"
+By Zane Little
+Dialogue System by Nathan Hoad"
+label_settings = SubResource("LabelSettings_tgbea")
 
 [node name="BackButton" type="Button" parent="." unique_id=113848584]
 custom_minimum_size = Vector2(80, 40)
