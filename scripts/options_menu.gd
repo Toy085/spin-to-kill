@@ -10,6 +10,8 @@ extends Panel
 
 @onready var fullscreen_label: Label = $VBoxContainer/FullscreenLabel
 
+@onready var delete_confirmation_dialog: ConfirmationDialog = $DeleteConfirmationDialog
+
 var locales: PackedStringArray = []
 
 func _ready() -> void:
@@ -79,4 +81,7 @@ func _on_lang_dropdown_item_selected(index: int) -> void:
 
 
 func _on_delete_button_pressed() -> void:
+	delete_confirmation_dialog.popup_centered()
+
+func _on_delete_confirmation_dialog_confirmed() -> void:
 	Global.delete_save()
